@@ -1,0 +1,14 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Viga";
+    margin: 0;
+    height: 100vh;
+    background-image: url("https://www.transparenttextures.com/patterns/black-lozenge.png");
+  }
+button{
+    width: 10vw;
+    height: 5vh;
+    border-radius: 10px;
+}

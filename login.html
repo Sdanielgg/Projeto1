@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TSIW</title>
+    <meta name="description" content="Projeto 1 TSIW">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Sérgio Gonçalves, Gonçalo Chaves, Samuel Fernandes">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+     </head>
+<body>
+    <div class="Login-container">
+            <div class="Account" id="Login">
+                <div class="d-grid gap-2">
+                    <h1>Login</h1>
+                    <input type="text" class="form-control form-control-lg" placeholder="Username"></input>
+                    <input type="password" class="form-control form-control-lg" placeholder="Password"></input>
+                    <span>Esqueceste-te da palavra-passe? <u>Clica aqui</u></span>
+                </div>
+                <div>
+                    <button id="Login-Button">Login</button>
+                </div>
+            </div>
+        </div>
+    <div class="Register-Container">
+        <div class="Account" id="Register">
+            <div class="mb-3 d-grid gap-2">
+                <h1>Register</h1>
+                <input type="text" class="form-control form-control-lg" placeholder="Username"></input>
+                <input type="password" class="form-control form-control-lg" placeholder="Password"></input>
+                <input type="password" class="form-control form-control-lg" placeholder="Confirm Password"></input>
+            </div>
+            <div >
+                <button id="Register-Button">Register</button>
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+    body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Viga";
+    margin: 0;
+  }
+  /* Login */
+    .Login-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: #acbadb;
+        height: 100vh;
+        width: 50%;
+    }
+    #Login{
+        padding: 0px;
+    }
+    #Login-Button{
+        background-color: white;
+        transition: 1s;
+    }
+     #Login-Button:hover{
+        background-color: #acbadb;
+        transition: 1s;
+
+     }   
+    /*  Register */
+    .Register-Container{        
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: white;
+        height: 100vh;
+        width: 50%;
+    }    
+    #Register{
+        padding: 0px;
+    }
+    #Register-Button{
+        background-color: #acbadb;
+        transition: 1s;
+    }
+    #Register-Button:hover{
+    background-color: #acbadb22;
+    transition: all 1s;
+    }
+
+    .Account{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+button{
+    width: 10vw;
+    height: 5vh;
+    border-radius: 10px;
+    border: 0;
+    transition: all 1ss;
+}
+</style>
+</html>
