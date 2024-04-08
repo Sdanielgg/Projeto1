@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TSIW-EscapeRoom</title>
+    <title>TSIW-Interactive Hub</title>
     <meta name="description" content="Projeto 1 TSIW">
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <meta name="author" content="Sérgio Gonçalves, Gonçalo Chaves, Samuel Fernandes">
@@ -13,13 +13,17 @@
         <div><a href="index.html"><img id="logo" src="./images/logo.svg"></a></div>
         <div class="avatar"><a><img id="avatar" src="./images/avatares/avatar1.svg"></a></div>
     </nav>
-    <div class="gameWindow">
-        <!-- isto vai ser um image map com botoes ou isso ou talvez a imagem é so background e os botões para as perguntas ficam por cima com alteração da imagem com o seu progresso ou 
-        alteração de outras coisas -->
-        <div class="game"><img id="gameImg" src="./images/image 5.png"></div>
+    <div class="subNav-Container">
+        <div class="subNav">
+            <button>Informações</button>
+            <button>Projetos</button>
+            <button>Testemunhos</button>
+
+        </div>
     </div>
 </body>
 <style>
+
     body{
         background-color: #001233;
     }
@@ -37,22 +41,28 @@
     #avatar{
         width: 15vh;
     }
-    /* Playable escape room */
-    .gameWindow{
-        padding: 3vh;
-
-    }
-    .game{
+    /* site content */
+    .subNav{
         display: flex;
-        justify-content: center;
-        
-    }
-    #gameImg{
-        width: 100vh;
-        height: auto;
-        border: 10px #979DAC solid;
+        flex-direction: row;
+        justify-content: space-around;
+        color:white;
+        border: 3px white solid;
         border-radius: 10px;
+        width: 70%;
     }
-
-</style>
-</html>
+    .subNav-Container{
+        display: flex;
+        justify-content:  center;
+    }
+    button{
+        height: 5vh;
+        width: 100%;
+        border: 0;
+    }
+    button:hover{
+        height: 5vh;
+        width: 100%;
+        border: 0;
+        background-color:grey;
+    }

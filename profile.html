@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TSIW-Interactive Hub</title>
+    <meta name="description" content="Projeto 1 TSIW">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Sérgio Gonçalves, Gonçalo Chaves, Samuel Fernandes">
+</head>
+<body>
+    <nav>
+        <div><a href="index.html"><img id="logo" src="./images/logo.svg"></a></div>
+        
+    </nav>
+    <div class="avatarHolder">
+        <div class="avatar"><a><img id="avatar" src="./images/avatares/avatar1.svg"></a></div>
+    </div>
+    <div class="title">
+        <p id="Username">Username</p>
+    </div>
+    <div class="buttonsHolder">
+        <button>Editar Conta</button>
+        <button>Alterar Conta</button>
+    </div>
+</body>
+<style>
+
+    body{
+        background-color: #001233;
+    }
+    /* navigation bar */
+    nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2vh;
+    }
+    
+    #logo{
+        width: 30vh;
+    } 
+    #avatar{
+        width: 30vh;
+    }
+    /* content */
+    .avatarHolder{
+        display: flex;
+        justify-content: center;
+    }
+    .buttonsHolder{
+        display: flex;
+        justify-content: center;
+    }
+    button{
+        height: 5vh;
+        margin: 2vh;
+        width: 15vh;
+        border: 0;
+        border-radius: 10px;
+        font-size: large;
+    }
+    button:hover{
+        height: 5vh;
+        width: 15vh;
+        border: 0;
+        background-color:grey;
+    }
+    #Username{
+        color: white;
+        font-size: 5vh;
+    }
+    .title{
+        display: flex;
+        justify-content: center;
+    }
