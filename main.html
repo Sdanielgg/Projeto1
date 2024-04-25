@@ -25,40 +25,70 @@
         <table id="docBody">
             <tr>
                 <td>
-                    <h1 style="color: white;">TITULO</h1>
-                    <a>Categoria</a>
-                    <p>05/01/2024</p>
+                    <h1>Projetos Finais!</h1>
+                    <p><a>Categoria</a>-00/00/2024</p>
+
                 </td>
+            </tr>
             <tr>
                 <td>
-                    <img src="./images/image 5.png" alt="post image">
+                    <img src="./images/imagemTeste.jpeg" alt="post image">
                 </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi aperiam aliquam placeat laboriosam vero nihil, vitae maxime cumque quibusdam totam quasi nisi impedit consequatur corrupti eveniet aliquid soluta sequi perspiciatis. ident dolor architecto aperiam culpa natus neque, voluptate totam, explicabo nemo earum fuga?</p>
+                    <div class="postBar">
+                        <div  style="display: flex; align-items: center; margin: 10px;">                            
+                            <span style="display: flex; align-items: center; color: black;font-size: 30px; margin: 10px;">30</span>
+                            <a href="#"><img style="width: 48px;" src="./images/icons/unLikedIcon.png"></a>
+                        </div>
+                        <div  style="display: flex; align-items: center; margin: 10px;">
+                            <span style="display: flex; align-items: center; color: black;font-size: 30px; margin: 10px;">30</span>
+                            <a href="#"><img style="width: 48px;" src="./images/icons/commentsIcon.png"></a>
+                        </div>
+                    </div>                
+                </td>
+            </tr>
         </table>
-    </div>
+    </div> 
 </body>
 <script>
-    function loadPost(postTitle,imagePath,text){
-        // document elements
-        let table=document.getElementById("docBody")
-        let row=document.createElement("tr")
-        // Title
-        let title=document.createElement("h1")
-        title.innerText=postTitle
-        title.style="color:white;"
-        row.appendChild(title)
-        table.appendChild(row)
-        // Image
-        let imagem=document.createElement("img")
-        imagem.src=imagePath
-        row.appendChild(imagem)
-        table.appendChild(row)
-        //Text
-        let texto=document.createElement("p")
-        texto.innerText=text
-        texto.style="color:white;"
-        row.appendChild(texto)
-        table.appendChild(row)
-    }
+    let postList=[[("OLAAAA"),("./images/image 5.png"),("FINALMENTE FIZ O TEXTO")],[("OLAAAA"),("./images/image 5.png"),("FINALMENTE FIZ O TEXTO")]]
+    console.log(postList[1][1])
+function loadPost(postTitle, imagePath, text) {
+    // Get the table element
+    let table = document.getElementById("docBody");
+
+    // Create a new table row
+    let row = document.createElement("tr");
+
+    // Title
+    let titleCell = document.createElement("td");
+    let title = document.createElement("h1");
+    title.innerText = postTitle;
+    title.style.color = "white";
+    titleCell.appendChild(title);
+    row.appendChild(titleCell);
+
+    // Image
+    let imageCell = document.createElement("td");
+    let image = document.createElement("img");
+    image.src = imagePath;
+    imageCell.appendChild(image);
+    row.appendChild(imageCell);
+
+    // Text
+    let textCell = document.createElement("td");
+    let textPara = document.createElement("p");
+    textPara.innerText = text;
+    textPara.style.color = "white";
+    textCell.appendChild(textPara);
+    row.appendChild(textCell);
+
+    // Append the row to the table
+    table.appendChild(row);
+}
 loadPost("OLAAAA","./images/image 5.png","FINALMENTE FIZ O TEXTO")
     
 
@@ -67,7 +97,9 @@ loadPost("OLAAAA","./images/image 5.png","FINALMENTE FIZ O TEXTO")
     body{
         background-color: #001233;
     }
+
     /* navigation bar */
+
     nav{
         display: flex;
         flex-direction: row;
@@ -78,10 +110,13 @@ loadPost("OLAAAA","./images/image 5.png","FINALMENTE FIZ O TEXTO")
     #logo{
         width: 30vh;
     } 
+
     #avatar{
         width: 15vh;
     }
+
     /* site content */
+
     .subNav{
         display: flex;
         flex-direction: row;
@@ -91,10 +126,12 @@ loadPost("OLAAAA","./images/image 5.png","FINALMENTE FIZ O TEXTO")
         border-radius: 10px;
         width: 70%;
     }
+
     .subNav-Container{
         display: flex;
         justify-content:  center;
     }
+
     button{
         height: 5vh;
         width: 100%;
@@ -106,11 +143,43 @@ loadPost("OLAAAA","./images/image 5.png","FINALMENTE FIZ O TEXTO")
         border: 0;
         background-color:grey;
     }
+
     /*Posts */
-    img{
-        width: 50vw;
-    }
-    #posts{
-        display: flex;
-        justify-content: center;
-    }
+
+  td{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    color: white;
+    padding: 10px; 
+}
+
+img{
+    width: 50%;
+}
+
+p{
+    width: 60%;
+    margin: 0;
+}
+h1{
+    padding: 0;
+    margin: 0;
+}
+
+#posts{
+    display: flex;
+    justify-content: center;
+}
+
+.postBar{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    width: 50%; 
+    border-radius: 10px;
+    margin: 2vh;
+}
