@@ -1,0 +1,66 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Viga";
+    margin: 0;
+  }
+  /* Login */
+    .Login-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: #acbadb;
+        height: 100vh;
+        width: 50%;
+    }
+    #Login{
+        padding: 0px;
+    }
+    #Login-Button{
+        background-color: white;
+        transition: 1s;
+        font-size: 1.25rem;
+    }
+     #Login-Button:hover{
+        background-color: #acbadb;
+        transition: 1s;
+
+     }   
+    /*  Register */
+    .Register-Container{        
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: white;
+        height: 100vh;
+        width: 50%;
+    }    
+    #Register{
+        padding: 0px;
+    }
+    #Register-Button{
+        background-color: #acbadb;
+        transition: 1s;
+        font-size: 1.25rem;
+    }
+    #Register-Button:hover{
+    background-color: #acbadb22;
+    transition: all 1s;
+    }
+
+    .Account{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+button{
+    width: 10vw;
+    height: 5vh;
+    border-radius: 10px;
+    border: 0;
+    transition: all 1ss;
+}
