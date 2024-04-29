@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TSIW-EscapeRoom</title>
+    <meta name="description" content="Projeto 1 TSIW">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Sérgio Gonçalves, Gonçalo Chaves, Samuel Fernandes">
+</head>
+<body>
+    <nav>
+        <div><a href="main.html"><img id="logo" src="./images/logo.svg"></a></div>
+        <div class="avatar"><a><img id="avatar" src="./images/avatares/avatar1.svg"></a></div>
+    </nav>
+    <div class="gameWindow">
+        <!-- isto vai ser um image map com botoes ou isso ou talvez a imagem é so background e os botões para as perguntas ficam por cima com alteração da imagem com o seu progresso ou 
+        alteração de outras coisas -->
+        <div class="game"><img id="gameImg" src="./images/image 5.png"></div>
+    </div>
+</body>
+<style>
+    body{
+        background-color: #001233;
+    }
+    /* navigation bar */
+    nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2vh;
+    }
+    #logo{
+        width: 30vh;
+    } 
+    #avatar{
+        width: 15vh;
+    }
+    /* Playable escape room */
+    .gameWindow{
+        padding: 3vh;
+    }
+    .game{
+        display: flex;
+        justify-content: center;
+    }
+    #gameImg{
+        width: 100vh;
+        height: auto;
+        border: 10px #979DAC solid;
+        border-radius: 10px;
+    }
+</style>
+</html>
