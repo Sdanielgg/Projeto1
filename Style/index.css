@@ -1,14 +1,43 @@
+* {
+  font-family: "Viga";
+}
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "Viga";
     margin: 0;
     height: 100vh;
-    background-image: url("https://www.transparenttextures.com/patterns/black-lozenge.png");
-  }
-button{
-    width: 10vw;
-    height: 5vh;
-    border-radius: 10px;
+    background-color: #acbadb;
+    color: #000000; 
 }
+
+.entry-button {
+  background-color: #0d4156; 
+  color: #ffffff; 
+  border-radius: 25px; 
+  font-size: 18px; 
+  padding: 10px 20px; 
+  border: none; 
+}
+
+.entry-button:hover {
+  background-color: #1781aa; 
+  color: #ffffff; 
+}
+
+.admin-button {
+  background-color: #323232; 
+  color: #ffffff; 
+  border-radius: 25px; 
+  font-size: 18px; 
+  padding: 10px 20px; 
+  border: none; 
+}
+
+.admin-button:hover {
+  background-color: #737475; 
+  color: #ffffff; 
+}
+
+

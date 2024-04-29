@@ -1,0 +1,31 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Viga";
+    margin: 0;
+    background-color: #737475;
+    color: white;
+}
+
+h1 {
+    font-family: 'Source Code Pro', monospace;
+}
+
+#backButton {
+    background-color: #8faecf;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  #backButton:hover {
+    background-color: #6d859f;
+  }
+  
+  #backButton i {
+    margin-right: 5px;
+  }
+  
