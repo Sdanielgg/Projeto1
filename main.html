@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TSIW-Interactive Hub</title>
+    <meta name="description" content="Projeto 1 TSIW">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Sérgio Gonçalves, Gonçalo Chaves, Samuel Fernandes">
+</head>
+<body>
+    <nav>
+        <div><a href="main.html"><img id="logo" src="./images/logo.svg"></a></div>
+        <div class="avatar"><a href="profile.html"><img id="avatar" src="./images/avatares/avatar1.svg"></a></div>
+    </nav>
+    <div class="subNav-Container">
+        <div class="subNav">
+            <button>Informações</button>
+            <button>Projetos</button>
+            <button>Testemunhos</button>
+
+        </div>
+    </div>
+    <div id="posts">
+        <table id="docBody">
+            <tr>
+                <td>
+                    <h1>Projetos Finais!</h1>
+                    <p><a>Categoria</a>-00/00/2024</p>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="./images/imagemTeste.jpeg" alt="post image">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi aperiam aliquam placeat laboriosam vero nihil, vitae maxime cumque quibusdam totam quasi nisi impedit consequatur corrupti eveniet aliquid soluta sequi perspiciatis. ident dolor architecto aperiam culpa natus neque, voluptate totam, explicabo nemo earum fuga?</p>
+                    <div class="postBar">
+                        <div  style="display: flex; align-items: flex-end; margin: 10px;">                            
+                            <span style="display: flex; align-items: center; color: black;font-size: 20px; margin: 10px;"><b>30</b></span>
+                            <a href="#"><img style="width: 35px;" src="./images/icons/unLikedIcon.png"></a>
+                        </div>
+                        <div  style="display: flex; align-items: center; margin: 10px;">
+                            <span style="display: flex; align-items: center; color: black;font-size: 20px; margin: 10px;"><b>30</b></span>
+                            <a href="#"><img style="width: 35px;" src="./images/icons/commentsIcon.png"></a>
+                        </div>
+                    </div>                
+                </td>
+            </tr>
+        </table>
+    </div> 
+</body>
+<script>
+    let postList=[[("OLAAAA"),("./images/image 5.png"),("FINALMENTE FIZ O TEXTO")],[("OLAAAA"),("./images/image 5.png"),("FINALMENTE FIZ O TEXTO")]]
+    console.log(postList[1][1])
+function loadPost(postTitle, imagePath, text) {
+    // Get the table element
+    let table = document.getElementById("docBody");
+
+    // Create a new table row
+    let row = document.createElement("tr");
+
+    // Title
+    let titleCell = document.createElement("td");
+    let title = document.createElement("h1");
+    title.innerText = postTitle;
+    title.style.color = "white";
+    titleCell.appendChild(title);
+    row.appendChild(titleCell);
+
+    // Image
+    let imageCell = document.createElement("td");
+    let image = document.createElement("img");
+    image.src = imagePath;
+    imageCell.appendChild(image);
+    row.appendChild(imageCell);
+
+    // Text
+    let textCell = document.createElement("td");
+    let textPara = document.createElement("p");
+    textPara.innerText = text;
+    textPara.style.color = "white";
+    textCell.appendChild(textPara);
+    row.appendChild(textCell);
+
+    // Append the row to the table
+    table.appendChild(row);
+}
+loadPost("OLAAAA","./images/image 5.png","FINALMENTE FIZ O TEXTO")
+loadPost("OLAAAA","./images/image 5.png","FINALMENTE FIZ O TEXTO")
+    
+
+</script>
+<style>
+    body{
+        background-color: #001233;
+    }
+
+    /* navigation bar */
+
+    nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2vh;
+    }
+    
+    #logo{
+        width: 30vh;
+    } 
+
+    #avatar{
+        width: 15vh;
+    }
+
+    /* site content */
+
+    .subNav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        color:white;
+        border: 3px white solid;
+        border-radius: 10px;
+        width: 70%;
+    }
+
+    .subNav-Container{
+        display: flex;
+        justify-content:  center;
+    }
+
+    button{
+        height: 5vh;
+        width: 100%;
+        border: 0;
+    }
+    button:hover{
+        height: 5vh;
+        width: 100%;
+        border: 0;
+        background-color:grey;
+    }
+
+    /*Posts */
+
+  td{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    color: white;
+    padding: 10px; 
+}
+
+img{
+    width: 50%;
+}
+
+p{
+    width: 60%;
+    margin: 0;
+}
+h1{
+    padding: 0;
+    margin: 0;
+}
+
+#posts{
+    display: flex;
+    justify-content: center;
+}
+
+.postBar{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    width: 50%; 
+    border-radius: 10px;
+    margin: 2vh;
+}
