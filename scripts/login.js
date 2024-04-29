@@ -108,8 +108,16 @@ document.getElementById("Register-Button").addEventListener("click", function() 
 function verifyLogin(username, password) {
     let user = users.find(user => user.username === username);
     
-    if (!user || user.password !== password) {
-        return { success: false, message: "Invalid username or password." };
+    if (!user) {
+        return { success: false, message: "Invalid username." };
+    }
+
+    if (user.status === 'blocked') {
+        return { success: false, message: "Your account is blocked. Please contact support for assistance." };
+    }
+
+    if (user.password !== password) {
+        return { success: false, message: "Invalid password." };
     }
 
     // Update user status to active upon successful login

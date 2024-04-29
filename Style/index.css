@@ -12,7 +12,7 @@ body {
     color: #000000; 
 }
 
-.custom-button {
+.entry-button {
   background-color: #0d4156; 
   color: #ffffff; 
   border-radius: 25px; 
@@ -21,8 +21,22 @@ body {
   border: none; 
 }
 
-.custom-button:hover {
+.entry-button:hover {
   background-color: #1781aa; 
+  color: #ffffff; 
+}
+
+.admin-button {
+  background-color: #323232; 
+  color: #ffffff; 
+  border-radius: 25px; 
+  font-size: 18px; 
+  padding: 10px 20px; 
+  border: none; 
+}
+
+.admin-button:hover {
+  background-color: #737475; 
   color: #ffffff; 
 }
 
