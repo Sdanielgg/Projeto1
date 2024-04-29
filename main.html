@@ -39,13 +39,13 @@
                 <td>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi aperiam aliquam placeat laboriosam vero nihil, vitae maxime cumque quibusdam totam quasi nisi impedit consequatur corrupti eveniet aliquid soluta sequi perspiciatis. ident dolor architecto aperiam culpa natus neque, voluptate totam, explicabo nemo earum fuga?</p>
                     <div class="postBar">
-                        <div  style="display: flex; align-items: center; margin: 10px;">                            
-                            <span style="display: flex; align-items: center; color: black;font-size: 30px; margin: 10px;">30</span>
-                            <a href="#"><img style="width: 48px;" src="./images/icons/unLikedIcon.png"></a>
+                        <div  style="display: flex; align-items: flex-end; margin: 10px;">                            
+                            <span style="display: flex; align-items: center; color: black;font-size: 20px; margin: 10px;"><b>30</b></span>
+                            <a href="#"><img style="width: 35px;" src="./images/icons/unLikedIcon.png"></a>
                         </div>
                         <div  style="display: flex; align-items: center; margin: 10px;">
-                            <span style="display: flex; align-items: center; color: black;font-size: 30px; margin: 10px;">30</span>
-                            <a href="#"><img style="width: 48px;" src="./images/icons/commentsIcon.png"></a>
+                            <span style="display: flex; align-items: center; color: black;font-size: 20px; margin: 10px;"><b>30</b></span>
+                            <a href="#"><img style="width: 35px;" src="./images/icons/commentsIcon.png"></a>
                         </div>
                     </div>                
                 </td>
@@ -89,6 +89,7 @@ function loadPost(postTitle, imagePath, text) {
     // Append the row to the table
     table.appendChild(row);
 }
+loadPost("OLAAAA","./images/image 5.png","FINALMENTE FIZ O TEXTO")
 loadPost("OLAAAA","./images/image 5.png","FINALMENTE FIZ O TEXTO")
     
 
@@ -176,9 +177,7 @@ h1{
 .postBar{
     display:flex;
     flex-direction:row;
-    justify-content: space-between;
     align-items: center;
-    background-color: white;
     width: 50%; 
     border-radius: 10px;
     margin: 2vh;
