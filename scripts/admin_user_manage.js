@@ -22,44 +22,12 @@ function displayUsers() {
         const usernameCell = document.createElement('td');
         usernameCell.textContent = user.username;
 
-        const passwordCell = document.createElement('td');
-        passwordCell.textContent = '******'; // Display asterisks instead of the actual password
-
         const emailCell = document.createElement('td');
         emailCell.textContent = user.email;
 
         // Append cells to the row
         row.appendChild(usernameCell);
-        row.appendChild(passwordCell);
         row.appendChild(emailCell);
-
-        // Create Font Awesome icons for actions
-        const revealIcon = document.createElement('i');
-        revealIcon.className = 'fas fa-eye';
-        revealIcon.style.cursor = 'pointer';
-
-        const hideIcon = document.createElement('i');
-        hideIcon.className = 'fas fa-eye-slash';
-        hideIcon.style.cursor = 'pointer';
-        hideIcon.style.display = 'none'; // Initially hide the hide icon
-
-        revealIcon.addEventListener('click', () => {
-            passwordCell.textContent = user.password;
-            revealIcon.style.display = 'none';
-            hideIcon.style.display = 'inline';
-        });
-
-        hideIcon.addEventListener('click', () => {
-            passwordCell.textContent = '******';
-            revealIcon.style.display = 'inline';
-            hideIcon.style.display = 'none';
-        });
-
-        // Create a table data cell for the password actions
-        const passwordActionsCell = document.createElement('td');
-        passwordActionsCell.appendChild(revealIcon);
-        passwordActionsCell.appendChild(hideIcon);
-        row.appendChild(passwordActionsCell);
 
         // Create Font Awesome icons for account actions
         const blockIcon = document.createElement('i');
