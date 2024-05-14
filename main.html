@@ -7,22 +7,88 @@
     <meta name="description" content="Projeto 1 TSIW">
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <meta name="author" content="Sérgio Gonçalves, Gonçalo Chaves, Samuel Fernandes">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
     <nav>
-        <div><a href="main.html"><img id="logo" src="./images/logo.svg"></a></div>
-        <div class="avatar"><a href="profile.html"><img id="avatar" src="./images/avatares/avatar1.svg"></a></div>
+        <a href="main.html"><img id="logo" src="./images/logo.svg"></a>
+       <a href="profile.html"><img id="avatar" src="./images/avatares/avatar1.svg"></a>
     </nav>
+    <div class="container">
+        <br>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+          </ol>
+      
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+      
+            <div class="item active">
+              <img class="carousel-img" src="./images/image 5.png" alt="Chania" style="border-radius: 10px;">
+              <div class="carousel-caption">
+                <h3>TSIW-EscapeRoom</h3>
+                <p>Try our Escape Room to learn more!</p>
+              </div>
+            </div>
+      
+            <div class="item">
+              <img class="carousel-img" src="./images/imagemTeste.jpeg" alt="Chania" height="345">
+              <div class="carousel-caption">
+                <h3>Chania</h3>
+                <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+              </div>
+            </div>
+          
+            <div class="item">
+              <img class="carousel-img" src="./images/image 5.png" alt="Flower" height="345">
+              <div class="carousel-caption">
+                <h3>Flowers</h3>
+                <p>Beautiful flowers in Kolymbari, Crete.</p>
+              </div>
+            </div>
+      
+            <div class="item">
+              <img class="carousel-img" src="./images/imagemTeste.jpeg" alt="Flower" style="width: 1140px; height: 625;">
+              <div class="carousel-caption">
+                <h3>F443</h3>
+                <p>Beautiful flowers in Kolymbari, Crete.</p>
+              </div>
+            </div>
+        
+          </div>
+      
+          <!-- Left and right controls -->
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+      <br>
     <div class="subNav-Container">
         <div class="subNav">
             <button>Informações</button>
             <button>Projetos</button>
             <button>Testemunhos</button>
-
+            <button>Eventos</button>
         </div>
     </div>
+    <br>
+    <div class="content">
     <div id="posts">
-        <table id="docBody">
+        <h1></h1>
+        <table id="docBody" style="display: none;">
             <tr>
                 <td>
                     <h1>Projetos Finais!</h1>
@@ -51,16 +117,15 @@
                 </td>
             </tr>
         </table>
+    </div>
     </div> 
 </body>
 <script>
     let postList=[[("OLAAAA"),("./images/image 5.png"),("FINALMENTE FIZ O TEXTO")],[("OLAAAA"),("./images/image 5.png"),("FINALMENTE FIZ O TEXTO")]]
     console.log(postList[1][1])
 function loadPost(postTitle, imagePath, text) {
-    // Get the table element
+    
     let table = document.getElementById("docBody");
-
-    // Create a new table row
     let row = document.createElement("tr");
 
     // Title
@@ -89,27 +154,41 @@ function loadPost(postTitle, imagePath, text) {
     // Append the row to the table
     table.appendChild(row);
 }
-loadPost("OLAAAA","./images/image 5.png","FINALMENTE FIZ O TEXTO")
-loadPost("OLAAAA","./images/image 5.png","FINALMENTE FIZ O TEXTO")
     
-
 </script>
 <style>
+
     body{
         background-color: #001233;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
     }
-
+    /* Carrossel */
+    .carousel-inner > .item > img,
+    .carousel-inner > .item > a > img {
+        width: 100%;
+        height: 60%;
+        margin: auto
+    }
+    .right.carousel-control, .left.carousel-control, .carousel-img{
+        border-radius: 10px;
+        background-color: 0;
+    }
     /* navigation bar */
 
     nav{
+        width: 100%;
+        padding: 2vh;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding: 2vh;
     }
     
     #logo{
         width: 30vh;
+
     } 
 
     #avatar{
@@ -117,15 +196,19 @@ loadPost("OLAAAA","./images/image 5.png","FINALMENTE FIZ O TEXTO")
     }
 
     /* site content */
-
+    .content{
+        background-color: #7D8597;
+        width: 70%;
+    }
     .subNav{
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         color:white;
-        border: 3px white solid;
+        border: 0px solid;
         border-radius: 10px;
-        width: 70%;
+        background-color: #7D8597;
+        font-size: 3vh;
     }
 
     .subNav-Container{
@@ -137,6 +220,9 @@ loadPost("OLAAAA","./images/image 5.png","FINALMENTE FIZ O TEXTO")
         height: 5vh;
         width: 100%;
         border: 0;
+        border-radius: 10px;
+        background-color: #7D8597;
+        margin: 3px;
     }
     button:hover{
         height: 5vh;
