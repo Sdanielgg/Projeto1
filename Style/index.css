@@ -40,4 +40,9 @@ body {
   color: #ffffff; 
 }
 
-
+.entry-button,
+.admin-button {
+  font-size: 18px; 
+  padding: 10px 20px; 
+  border: none; 
+}
