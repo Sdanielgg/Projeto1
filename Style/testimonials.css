@@ -1,0 +1,100 @@
+
+body{
+    background-color: #001233;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.testemunho {
+    height: 60px;
+    width: 400px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin: 20px;
+    padding: 10px;
+    transition:all 0.3s ease;
+    float: left;
+    box-sizing: border-box;
+    text-align: center;
+}
+.testemunho:hover {
+    height: 150px;
+    width: 500px;
+}
+.nome {
+    font-weight: bold;
+}
+.conteudo {
+    display: none;
+    height: 100px;
+    width: 400px;
+    transition:all 0.3s ease;
+    justify-content: center;
+
+}
+.testemunho:hover .conteudo {
+    display: block;
+    height: 150px;
+    width: 450px;
+}
+.clear {
+    clear: both;
+}
+nav{
+    width: 100%;
+    padding: 2vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#logo{
+    width: 30vh;
+
+} 
+
+#avatar{
+    width: 15vh;
+}
+
+/* site content */
+.content{
+    background-color: #7D8597;
+    width: 70%;
+}
+.subNav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color:white;
+    border: 0px solid;
+    border-radius: 10px;
+    background-color: #7D8597;
+    font-size: 3vh;
+}
+
+.subNav-Container{
+    display: flex;
+    justify-content:  center;
+}
+
+button{
+    height: 5vh;
+    width: 100%;
+    border: 0;
+    border-radius: 10px;
+    background-color: #7D8597;
+    margin: 3px;
+}
+button:hover{
+    height: 5vh;
+    width: 100%;
+    border: 0;
+    background-color:grey;
+}
+
