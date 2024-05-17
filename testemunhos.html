@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TSIW-Interactive Hub</title>
+    <meta name="description" content="Projeto 1 TSIW">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Sérgio Gonçalves, Gonçalo Chaves, Samuel Fernandes">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./Style/global.css">
+</head>
+<body>
+    <nav>
+        <a href="main.html"><img id="logo" src="./images/logo.svg"></a>
+       <a href="profile.html"><img id="avatar" src="./images/avatares/avatar1.svg"></a>
+    </nav>
+
+    <div class="subNav-Container">
+        <div class="subNav">
+            <button>Informações</button>
+            <button>Projetos</button>
+            <a href="testimonials.html"><button>Testemunhos</button></a>
+            <button>Eventos</button>
+        </div>
+    </div>
+    <br>
+    <div class="testemunhos">
+        <div id="alumni_credentials">
+            <img id="alumni_image" src="./images/avatares/avatar1.svg">
+            <h1>Alumni Name</h1>
+        </div>
+        <div>
+            <h3>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+            Quisquam saepe veritatis eius itaque delectus molestiae nisi animi. 
+            Dolores corporis nobis explicabo aspernatur qui natus mollitia quo amet, id sapiente pariatur. Adoro TSIW!!</h3>
+        </div>
+    </div>
+    <div class="testemunhos_buttons">
+    </div>
+    <style>
+        
+        .testemunhos{
+            display: flex;
+            flex-direction: column;
+            width: 1170px;
+        }
+        #alumni_credentials{
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+        }
+        #alumni_image{
+            width: 15vh;
+        }
+        h1,h3{
+            color: white;
+        }
+        
+    </style>
+</body>
+</html>
