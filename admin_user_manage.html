@@ -12,17 +12,17 @@
 </head>
 <body>
 
-<div class="container">
-    <button id="backButton" onclick="goBack()">
-        <i class="fas fa-arrow-left"></i> Go Back
-    </button>
-    <h1 class="text-center mt-5">User Management</h1>
-    <table id="userTable" class="table table-striped mt-3">
-        <tbody id="userList"></tbody>
-    </table>
-</div>
+    <div class="container">
+        <button id="backButton" onclick="goBack()">
+            <i class="fas fa-arrow-left"></i> Go Back
+        </button>
+        <h1 class="text-center mt-5">User Management</h1>
+        <div id="userList" class="user-cards">
+        </div>
+    </div>
+    
 
-<script src="./scripts/admin_user_manage.js"></script>
+<script src="./scripts/views/AdminUserManageView.js"></script>
 
 </body>
 </html>

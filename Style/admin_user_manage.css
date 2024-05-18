@@ -28,4 +28,21 @@ h1 {
   #backButton i {
     margin-right: 5px;
   }
-  
+  .user-card {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.user-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 5px; /* Add margin-bottom */
+}
+
+.user-card p {
+    margin: 0;
+    line-height: 1.5;
+    margin-bottom: 10px; /* Add margin-bottom */
+}

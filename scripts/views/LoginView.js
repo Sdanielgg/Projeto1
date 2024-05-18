@@ -9,6 +9,17 @@ function showTextBox() {
     }
 }
 
+function displayAlert(message, alertType) {
+    const alertContainer = document.getElementById('alertContainer');
+    const alertElement = document.createElement('div');
+    alertElement.classList.add('alert', `alert-${alertType}`, 'alert-dismissible', 'fade', 'show');
+    alertElement.innerHTML = `
+        <strong>${message}</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    `;
+    alertContainer.appendChild(alertElement);
+}
+
 function registerUser() {
     const nome = document.querySelector('#Register input[placeholder="Nome"]').value;
     const email = document.querySelector('#Register input[placeholder="Email"]').value;
@@ -20,7 +31,7 @@ function registerUser() {
     const confirmPassword = document.querySelector('#Register input[placeholder="Confirmar Password"]').value;
 
     if (password !== confirmPassword) {
-        alert("Passwords don't match");
+        displayAlert("Passwords don't match", "danger");
         return;
     }
 
@@ -30,21 +41,23 @@ function registerUser() {
     users.push(newUser);
     localStorage.setItem('users', JSON.stringify(users));
 
-    alert('Registration successful!');
+    displayAlert('Registration successful!', 'success');
 }
 
 function loginUser() {
     const username = document.querySelector('#Login input[placeholder="Username"]').value;
     const password = document.querySelector('#Login input[placeholder="Password"]').value;
 
-    const users = JSON.parse(localStorage.getItem('users')) || [];
+    let users = JSON.parse(localStorage.getItem('users')) || [];
 
-    const user = users.find(u => u.username === username && u.password === password);
+    const userIndex = users.findIndex(u => u.username === username && u.password === password);
 
-    if (user) {
-        alert('Login successful!');
+    if (userIndex !== -1) {
+        users[userIndex].status = "active";
+        localStorage.setItem('users', JSON.stringify(users));
+        displayAlert('Login successful!', 'success');
     } else {
-        alert('Invalid username or password');
+        displayAlert('Invalid username or password', 'danger');
     }
 }
 
