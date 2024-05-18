@@ -1,0 +1,74 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Viga";
+    margin: 0;
+    background-color: #737475;
+    color: white;
+}
+
+h1 {
+    font-family: 'Source Code Pro', monospace;
+}
+
+#backButton {
+    background-color: #8faecf;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  #backButton:hover {
+    background-color: #6d859f;
+  }
+  
+  #backButton i {
+    margin-right: 5px;
+  }
+
+  .testimonial-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.testimonial-card {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-image {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.testimonial-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.testimonial-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.testimonial-card p {
+    margin: 0;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.testimonial-table-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
