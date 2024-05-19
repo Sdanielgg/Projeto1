@@ -14,17 +14,15 @@
 <body>
     <nav>
         <a href="main.html"><img id="logo" src="./images/logo.svg"></a>
+        <div class="subNav">
+        <a href="testimonials.html">Informações</a>
+            <a href="testimonials.html">Projetos</a>
+            <a href="testimonials.html">Testemunhos</a>
+            <a href="testimonials.html">Eventos</a>
+        </div>
        <a href="profile.html"><img id="avatar" src="./images/avatares/avatar1.svg"></a>
     </nav>
 
-    <div class="subNav-Container">
-        <div class="subNav">
-            <button>Informações</button>
-            <button>Projetos</button>
-            <a href="testimonials.html"><button>Testemunhos</button></a>
-            <button>Eventos</button>
-        </div>
-    </div>
 
     <div class="container">
         <br>
@@ -41,7 +39,7 @@
           <div class="carousel-inner" role="listbox">
       
             <div class="item active">
-              <img class="carousel-img" src="./images/image 5.png" alt="Chania" style="border-radius: 10px;">
+              <img class="carousel-img" src="./images/image 5.png" alt="Chania">
               <div class="carousel-caption">
                 <h3>TSIW-EscapeRoom</h3>
                 <p>Try our Escape Room to learn more!</p>
@@ -49,7 +47,7 @@
             </div>
       
             <div class="item">
-              <img class="carousel-img" src="./images/imagemTeste.jpeg" alt="Chania" height="345">
+              <img class="carousel-img" src="./images/imagemTeste.jpeg" alt="Chania">
               <div class="carousel-caption">
                 <h3>Chania</h3>
                 <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
@@ -57,7 +55,7 @@
             </div>
           
             <div class="item">
-              <img class="carousel-img" src="./images/image 5.png" alt="Flower" height="345">
+              <img class="carousel-img" src="./images/image 5.png" alt="Flower">
               <div class="carousel-caption">
                 <h3>Flowers</h3>
                 <p>Beautiful flowers in Kolymbari, Crete.</p>
@@ -65,7 +63,7 @@
             </div>
       
             <div class="item">
-              <img class="carousel-img" src="./images/imagemTeste.jpeg" alt="Flower" style="width: 1140px; height: 625;">
+              <img class="carousel-img" src="./images/imagemTeste.jpeg" alt="Flower">
               <div class="carousel-caption">
                 <h3>F443</h3>
                 <p>Beautiful flowers in Kolymbari, Crete.</p>
@@ -157,7 +155,7 @@ function loadPost(postTitle, imagePath, text) {
     // Append the row to the table
     table.appendChild(row);
 }
-    
+
 </script>
 <style>
 
@@ -171,31 +169,42 @@ function loadPost(postTitle, imagePath, text) {
     /* Carrossel */
     .carousel-inner > .item > img,
     .carousel-inner > .item > a > img {
-        width: 100%;
-        height: 60%;
+        width: 900px;
+        height: 500px;
         margin: auto
     }
-    .right.carousel-control, .left.carousel-control, .carousel-img{
-        border-radius: 10px;
+    .right.carousel-control, .left.carousel-control{
+        border-radius: 5px;
         background-color: 0;
+        width: 150px;
     }
     /* navigation bar */
 
     nav{
         width: 100%;
         padding: 2vh;
-        display: flex;
+        display:flex;
         flex-direction: row;
         justify-content: space-between;
     }
+
+    .subNav{
+        
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;
+        border: 0px solid;
+        font-size: 3vh;
+    }
     
     #logo{
-        width: 30vh;
-
+        width: 15vh;
+        
     } 
 
     #avatar{
-        width: 15vh;
+        width: 10vh;
+        justify-content: right;
     }
 
     /* site content */
@@ -203,21 +212,9 @@ function loadPost(postTitle, imagePath, text) {
         background-color: #7D8597;
         width: 70%;
     }
-    .subNav{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        color:white;
-        border: 0px solid;
-        border-radius: 10px;
-        background-color: #7D8597;
-        font-size: 3vh;
-    }
 
-    .subNav-Container{
-        display: flex;
-        justify-content:  center;
-    }
+
+  
 
     button{
         height: 5vh;
@@ -271,3 +268,4 @@ h1{
     border-radius: 10px;
     margin: 2vh;
 }
+</style>
