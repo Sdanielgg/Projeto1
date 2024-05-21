@@ -2,7 +2,6 @@ import { Testimonial } from '../models/TestimonialModel.js';
 
 const testimonialForm = document.getElementById('testimonialForm');
 const testimonialList = document.getElementById('testimonialList');
-
 const testimonials = JSON.parse(localStorage.getItem('testimonials')) || [];
 
 function saveTestimonials() {
@@ -10,16 +9,19 @@ function saveTestimonials() {
 }
 
 function displayTestimonials() {
-    testimonialList.innerHTML = ''; 
+    testimonialList.innerHTML = '';
 
     testimonials.forEach((testimonial, index) => {
         const testimonialCard = document.createElement('div');
         testimonialCard.classList.add('testimonial-card', 'card', 'mb-3');
 
-        const testimonialImage = document.createElement('img');
-        testimonialImage.src = testimonial.image;
-        testimonialImage.alt = `${testimonial.name}'s image`;
-        testimonialImage.classList.add('card-img-top', 'testimonial-image');
+        if (testimonial.image) {
+            const testimonialImage = document.createElement('img');
+            testimonialImage.src = testimonial.image;
+            testimonialImage.alt = `${testimonial.name}'s image`;
+            testimonialImage.classList.add('card-img-top', 'testimonial-image');
+            testimonialCard.appendChild(testimonialImage);
+        }
 
         const cardBody = document.createElement('div');
         cardBody.classList.add('card-body');
@@ -53,9 +55,7 @@ function displayTestimonials() {
         cardBody.appendChild(testimonialMessage);
         cardBody.appendChild(deleteButton);
 
-        testimonialCard.appendChild(testimonialImage);
         testimonialCard.appendChild(cardBody);
-
         testimonialList.appendChild(testimonialCard);
     });
 }
@@ -73,16 +73,27 @@ testimonialForm.addEventListener('submit', (e) => {
     const title = document.getElementById('testimonialTitle').value;
     const date = document.getElementById('testimonialDate').value;
     const messageBody = document.getElementById('testimonialMessage').value;
-    const image = ''; 
+    const imageFile = document.getElementById('testimonialImage').files[0];
+    let image = '';
 
+    if (imageFile) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            image = e.target.result;
+            addTestimonial(name, title, date, messageBody, image);
+        };
+        reader.readAsDataURL(imageFile);
+    } else {
+        addTestimonial(name, title, date, messageBody, image);
+    }
+});
+
+function addTestimonial(name, title, date, messageBody, image) {
     const newTestimonial = new Testimonial(name, title, date, messageBody, image);
     testimonials.push(newTestimonial);
-
     saveTestimonials();
-
     testimonialForm.reset();
-
     displayTestimonials();
-});
+}
 
 displayTestimonials();

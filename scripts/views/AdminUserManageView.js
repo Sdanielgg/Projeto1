@@ -1,4 +1,4 @@
-const usersData = JSON.parse(localStorage.getItem('users'));
+const usersData = JSON.parse(localStorage.getItem('users')) || [];
 
 function updateLocalStorage(users) {
     localStorage.setItem('users', JSON.stringify(users));
@@ -10,71 +10,72 @@ function displayUsers() {
     userList.innerHTML = '';
 
     usersData.forEach(user => {
-        const row = document.createElement('tr');
+        const userCard = document.createElement('div');
+        userCard.classList.add('col-md-4', 'mb-4'); 
 
-        const usernameCell = document.createElement('td');
-        usernameCell.textContent = user.username;
+        userCard.innerHTML = `
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">${user.username}</h5>
+                    <p class="card-text">Email: ${user.email}</p>
+                    ${user.status === 'blocked' ? '<span class="badge bg-danger">Blocked</span>' : ''}
+                    <div class="account-actions mt-3">
+                        <button class="btn btn-danger btn-sm me-1 block-btn" data-username="${user.username}">
+                            <i class="fas fa-ban"></i> Block
+                        </button>
+                        <button class="btn btn-warning btn-sm me-1 unblock-btn" data-username="${user.username}">
+                            <i class="fas fa-lock"></i> Unblock
+                        </button>
+                        <button class="btn btn-primary btn-sm delete-btn" data-username="${user.username}">
+                            <i class="fas fa-trash-alt"></i> Delete
+                        </button>
+                    </div>
+                </div>
+            </div>
+        `;
 
-        const emailCell = document.createElement('td');
-        emailCell.textContent = user.email;
+        userList.appendChild(userCard);
+    });
 
-        row.appendChild(usernameCell);
-        row.appendChild(emailCell);
-
-        const blockIcon = document.createElement('i');
-        blockIcon.className = 'fas fa-ban text-danger';
-        blockIcon.style.cursor = 'pointer';
-        blockIcon.title = 'Block Account';
-
-        const unblockIcon = document.createElement('i');
-        unblockIcon.className = 'fas fa-lock text-warning';
-        unblockIcon.style.cursor = 'pointer';
-        unblockIcon.title = 'Unblock Account';
-
-        const deleteIcon = document.createElement('i');
-        deleteIcon.className = 'fas fa-trash-alt text-primary';
-        deleteIcon.style.cursor = 'pointer';
-        deleteIcon.title = 'Delete Account';
-
-        blockIcon.addEventListener('click', () => {
-            const index = usersData.findIndex(u => u.username === user.username);
+    document.querySelectorAll('.block-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const username = button.getAttribute('data-username');
+            const index = usersData.findIndex(u => u.username === username);
             if (index !== -1) {
                 usersData[index].status = 'blocked';
                 updateLocalStorage(usersData);
                 displayUsers();
             }
         });
+    });
 
-        unblockIcon.addEventListener('click', () => {
-            const index = usersData.findIndex(u => u.username === user.username);
+    document.querySelectorAll('.unblock-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const username = button.getAttribute('data-username');
+            const index = usersData.findIndex(u => u.username === username);
             if (index !== -1) {
                 usersData[index].status = 'inactive';
                 updateLocalStorage(usersData);
                 displayUsers();
             }
         });
+    });
 
-        deleteIcon.addEventListener('click', () => {
-            const index = usersData.findIndex(u => u.username === user.username);
+    document.querySelectorAll('.delete-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const username = button.getAttribute('data-username');
+            const index = usersData.findIndex(u => u.username === username);
             if (index !== -1) {
                 usersData.splice(index, 1);
                 updateLocalStorage(usersData);
                 displayUsers();
             }
         });
-
-        const accountActionsCell = document.createElement('td');
-        accountActionsCell.appendChild(blockIcon);
-        accountActionsCell.appendChild(unblockIcon);
-        accountActionsCell.appendChild(deleteIcon);
-        row.appendChild(accountActionsCell);
-
-        userList.appendChild(row);
     });
 }
 
 function goBack() {
-    window.history.back();
+    window.location.href = '../admin_page.html'; 
 }
 
-displayUsers();
+document.addEventListener('DOMContentLoaded', displayUsers);

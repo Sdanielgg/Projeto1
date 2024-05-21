@@ -13,12 +13,12 @@
 <body>
 
 <div class="container">
-    <button id="backButton" onclick="goBack()">
+    <button id="backButton" onclick="goBack()" class="btn btn-secondary mt-3">
         <i class="fas fa-arrow-left"></i> Go Back
     </button>
     <h1 class="text-center mt-5">Testimonial Management</h1>
 
-    <form id="testimonialForm" class="mt-4">
+    <form id="testimonialForm" class="mt-4 p-4 shadow-sm rounded">
         <div class="mb-3">
             <label for="testimonialName" class="form-label">Name</label>
             <input type="text" class="form-control" id="testimonialName" required>
@@ -35,6 +35,10 @@
             <label for="testimonialDate" class="form-label">Date</label>
             <input type="date" class="form-control" id="testimonialDate" required>
         </div>
+        <div class="mb-3">
+            <label for="testimonialImage" class="form-label">Upload Image</label>
+            <input type="file" class="form-control" id="testimonialImage" accept="image/*">
+        </div>
         <button type="submit" class="btn btn-primary">Submit Testimonial</button>
     </form>
 
@@ -44,6 +48,11 @@
 
 <script src="./scripts/models/TestimonialModel.js" type="module"></script>
 <script src="./scripts/views/AdminTestimonialView.js" type="module"></script>
+<script>
+    function goBack() {
+        window.location.href = '../admin_page.html';
+    }
+</script>
 
 </body>
 </html>

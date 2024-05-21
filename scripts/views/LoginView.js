@@ -53,9 +53,13 @@ function loginUser() {
     const userIndex = users.findIndex(u => u.username === username && u.password === password);
 
     if (userIndex !== -1) {
-        users[userIndex].status = "active";
-        localStorage.setItem('users', JSON.stringify(users));
-        displayAlert('Login successful!', 'success');
+        if (users[userIndex].status === 'blocked') {
+            displayAlert('Your account is blocked. Please contact support.', 'danger');
+        } else {
+            users[userIndex].status = "active";
+            localStorage.setItem('users', JSON.stringify(users));
+            displayAlert('Login successful!', 'success');
+        }
     } else {
         displayAlert('Invalid username or password', 'danger');
     }

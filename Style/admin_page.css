@@ -18,19 +18,44 @@ body {
     height: 100vh;
 }
 
-.admin-button{
-    background-color: #4a4a4a;
-    transition: 1s;
-    font-size: 1.25rem;
+.admin-button {
+    background-color: transparent;
     border: none;
+    color: #ffffff;
+    font-size: 1.25rem;
+    transition: color 0.3s;
 }
 
 .admin-button:hover {
-    background-color: #252525;
-    transition: 1s;
-    border: none;
+    background-color: transparent;
+    color: #a0d5e4;
+    font-size: x-large;
 }
 
 h1 {
     font-family: 'Source Code Pro', monospace;
+}
+#logoutButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 20%;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logoutButton i {
+    margin-right: 5px;
+}
+
+.btn-out {
+    background-color: #526c85;
+    color: white;
+}
+
+.btn-out:hover {
+    background-color: #6693be;
+    color: #000000;
 }
