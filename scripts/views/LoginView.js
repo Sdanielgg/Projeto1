@@ -43,6 +43,19 @@ function registerUser() {
 
     displayAlert('Registration successful!', 'success');
 }
+function wait(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+  
+  async function handleLoginSuccess() {
+    displayAlert('Login successful!', 'success');
+    
+    await wait(1000); // Wait for 1 second (1000 milliseconds)
+    
+    window.location.href = "./main.html";
+  }
+  
+  // Call the function to handle login success
 
 function loginUser() {
     const username = document.querySelector('#Login input[placeholder="Username"]').value;
@@ -58,7 +71,8 @@ function loginUser() {
         } else {
             users[userIndex].status = "active";
             localStorage.setItem('users', JSON.stringify(users));
-            displayAlert('Login successful!', 'success');
+
+            handleLoginSuccess();
         }
     } else {
         displayAlert('Invalid username or password', 'danger');
