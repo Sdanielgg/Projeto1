@@ -15,7 +15,7 @@ body {
 .entry-button {
   background-color: #0d4156; 
   color: #ffffff; 
-  border-radius: 25px; 
+  border-radius: 10px; 
   font-size: 18px; 
   padding: 10px 20px; 
   border: none; 
@@ -29,7 +29,7 @@ body {
 .admin-button {
   background-color: #323232; 
   color: #ffffff; 
-  border-radius: 25px; 
+  border-radius: 10px; 
   font-size: 18px; 
   padding: 10px 20px; 
   border: none; 
