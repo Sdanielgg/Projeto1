@@ -1,0 +1,111 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Viga";
+    margin: 0;
+    background-color: #737475;
+    color: white;
+}
+
+h1, h2 {
+    font-family: 'Source Code Pro', monospace;
+}
+#backButton {
+    background-color: #8faecf;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 20px; 
+  }
+  
+  #backButton:hover {
+    background-color: #6d859f;
+  }
+  
+  #backButton i {
+    margin-right: 5px;
+  }
+
+form {
+    background-color: #526c85;
+    color: white;
+    border-radius: 10px;
+}
+
+form .form-control {
+    background-color: #caddee;
+    border: none;
+}
+
+form .form-control:focus {
+    box-shadow: none;
+}
+
+form .btn-primary {
+    background-color: #8faecf;
+    color: black;
+    border: none;
+}
+
+form .btn-primary:hover {
+    background-color: #6d859f;
+}
+
+#eventList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.event-card {
+    background-color: #526c85;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    color: white;
+    flex: 1 1 calc(33.333% - 20px);
+    display: flex;
+    flex-direction: column;
+}
+
+.event-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card-subtitle {
+    font-size: 1.25rem;
+    color: #d1d1d1;
+}
+
+.card-text {
+    margin-bottom: 1rem;
+}
+
+.btn-danger {
+    align-self: flex-end;
+    margin-top: 10px;
+    background-color: #d9534f;
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: #c9302c;
+}
