@@ -1,4 +1,4 @@
-export class User {
+class User {
     constructor(nome, idade, sexo, localidade, email, username, password, status = "inactive", role = "regular") {
         this.nome = nome;
         this.idade = idade;

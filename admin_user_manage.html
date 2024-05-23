@@ -12,17 +12,22 @@
 </head>
 <body>
 
-    <div class="container">
-        <button id="backButton" class="btn btn-secondary mt-3" onclick="goBack()">
+    <div class="container mt-5">
+        <button id="backButton" class="btn btn-secondary mb-3" onclick="goBack()">
             <i class="fas fa-arrow-left"></i> Go Back
         </button>
-        <h1 class="text-center mt-5">User Management</h1>
-        <div id="userList" class="row">
+        <h1 class="text-center mb-4">User Management</h1>
+        <div id="userList" class="row g-4">
         </div>
     </div>
     
 
 <script src="./scripts/views/AdminUserManageView.js"></script>
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
 
 </body>
 </html>
