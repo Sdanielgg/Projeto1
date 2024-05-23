@@ -14,7 +14,7 @@
 </head>
 <body>
     <nav>
-        <a href="main.html"><img id="logo" src="./images/logo.svg"></a>
+        <a href="main.html"><img class="logo" src="./images/logo.svg"></a>
        <a href="profile.html"><img id="avatar" src="./images/avatares/avatar1.svg"></a>
     </nav>
 
@@ -40,8 +40,29 @@
         </div>
     </div>
     <div class="testemunhos_buttons">
+
     </div>
+    <footer style="background-color: #002855;" >
+        <div class="footer_image_buttons">
+            <div class="footer_image">
+                <img class  ="logo"  src="./images/logo.svg">
+            </div>
+            <div class="footer_buttons">
+                <a>Introdução</a>
+                <a>Informações</a>
+                <a>Eventos</a>
+                <a>Testemunhos</a>
+            </div>
+        </div>
+        
+        <div class="social_media_icons">
+            <a href="https://www.facebook.com/groups/comunidade.tsiw/"><img src="./images/icons/facebook_icon.svg" ></a>
+            <a href="https://www.instagram.com/_tsiw.esmad_/"><img src="./images/icons/instagram_icon.svg"></a>
+            <a><img></a>
+        </div>
+    </footer>
     <style>
+    
         
         .testemunhos{
             display: flex;
@@ -58,6 +79,26 @@
         }
         h1,h3{
             color: white;
+        }
+        footer{
+            display: flex;
+            flex-direction: row;
+            padding: 3vh;
+            width: 100%;
+            justify-content: center;
+        }
+        .footer_image_buttons{
+            display: flex;
+            margin: 10vh;
+        }
+        .footer_image{
+            display: flex;
+            justify-content: center;
+        }
+        .footer_buttons{
+            margin: 5vh;
+            display: flex;
+            flex-direction: column;
         }
         
     </style>
