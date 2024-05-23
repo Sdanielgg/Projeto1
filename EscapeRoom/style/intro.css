@@ -1,44 +1,60 @@
-
 #background {
-    background-image: url('style/images/RoomEscapeRoom.avif');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:100%;
     background-position: center;
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    filter: blur(6px);
-    z-index: -1; /* Ensures it stays in the background */
+    z-index: -1;
 }
 
 #center-rectangle {
     position: absolute;
-    width: 1000px; /* Adjust the width as needed */
-    height: 400px; /* Adjust the height as needed */
-    background-color: white;
-    border-radius: 10px; /* Adds rounded corners */
+    width: 1000px;
+    height: 400px; 
+    background-color: rgba(255, 255, 255, 0.767);
+    border-radius: 10px; 
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Centers the rectangle */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for better visibility */
-    z-index: 1; /* Ensures it stays above the background */
-    overflow: visible; /* Ensures child elements can overflow */
-    display: flex; /* Permite alinhamento vertical */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    z-index: 2; 
+    overflow: visible; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
 }
 
+@font-face {
+    font-family: "Cascadia";
+    src: url("fonts/Cascadia.ttf");
+  }
+
 #clickable-text {
-    font-family: Arial, sans-serif; /* Altera a fonte */
-    font-size: 24px; /* Ajusta o tamanho do texto */
-    text-align: center; /* Centraliza horizontalmente o texto */
+    font-family:Cascadia; 
+    color: #119822;
+    font-size: 30px; 
+    text-align: center; 
+    justify-content:left;
 }
 #hoot{
     position: absolute;
-    width: 150px; /* Adjust the size as needed */
-    top: -10%; /* Moves half of the image out of the rectangle */
-    left: -5%; /* Moves half of the image out of the rectangle */
-    z-index: 2; /* Ensures it stays above the rectangle */
+    width: 150px;
+    top: -10%; 
+    left: -5%; 
+    z-index: 2; 
+}
+
+#side-button {
+    position: fixed; 
+    right: 19%;
+    top: 38%;
+    padding: 4% 8%;
+    cursor: pointer;
+    background-color: transparent; 
+    border: none; 
+    color: transparent;
+    z-index: 1; 
 }

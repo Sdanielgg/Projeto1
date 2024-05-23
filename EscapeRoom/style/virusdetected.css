@@ -1,0 +1,50 @@
+body{
+    background-color: #001233;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+
+}
+
+#danger{
+    max-width: 20%; 
+    height: auto;
+    position: fixed;
+    top: 10%;
+}
+
+.blinking {
+    animation: blinkingText 1s infinite;
+}
+@keyframes blinkingText {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.blinkingImg {
+    animation: blinkingImage 2s infinite;
+}
+
+@keyframes blinkingImage {
+    0% { opacity: 1.0; }
+    50% { opacity: 0.6; }
+    100% { opacity: 1.0; }
+}
+
+@font-face {
+    font-family: "Cascadia";
+    src: url("fonts/Cascadia.ttf");
+  }
+
+#message{
+    font-family:Cascadia;
+    color: #FFFCF2;
+    font-size: 40px;
+    text-align: center;
+    justify-content:left;
+    position: fixed; 
+}
