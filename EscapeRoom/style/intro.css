@@ -1,0 +1,44 @@
+
+#background {
+    background-image: url('style/images/RoomEscapeRoom.avif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    filter: blur(6px);
+    z-index: -1; /* Ensures it stays in the background */
+}
+
+#center-rectangle {
+    position: absolute;
+    width: 1000px; /* Adjust the width as needed */
+    height: 400px; /* Adjust the height as needed */
+    background-color: white;
+    border-radius: 10px; /* Adds rounded corners */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the rectangle */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for better visibility */
+    z-index: 1; /* Ensures it stays above the background */
+    overflow: visible; /* Ensures child elements can overflow */
+    display: flex; /* Permite alinhamento vertical */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+#clickable-text {
+    font-family: Arial, sans-serif; /* Altera a fonte */
+    font-size: 24px; /* Ajusta o tamanho do texto */
+    text-align: center; /* Centraliza horizontalmente o texto */
+}
+#hoot{
+    position: absolute;
+    width: 150px; /* Adjust the size as needed */
+    top: -10%; /* Moves half of the image out of the rectangle */
+    left: -5%; /* Moves half of the image out of the rectangle */
+    z-index: 2; /* Ensures it stays above the rectangle */
+}
