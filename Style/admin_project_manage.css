@@ -1,0 +1,78 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Viga";
+    margin: 0;
+    background-color: #737475;
+    color: white;
+}
+
+h1 {
+    font-family: 'Source Code Pro', monospace;
+}
+
+#backButton {
+    background-color: #8faecf;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  #backButton:hover {
+    background-color: #6d859f;
+  }
+  
+  #backButton i {
+    margin-right: 5px;
+  }
+#projectList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.card-body {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-subtitle {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+.card-text {
+    margin-bottom: 1rem;
+}
+
+.btn-danger {
+    align-self: flex-end;
+    margin-top: 10px;
+}
