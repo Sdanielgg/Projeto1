@@ -1,4 +1,4 @@
-import { Testimonial } from '../models/TestimonialModel.js';
+import { Testimonial } from '../models/testimonial_model.js';
 
 const testimonialForm = document.getElementById('testimonialForm');
 const testimonialList = document.getElementById('testimonialList');

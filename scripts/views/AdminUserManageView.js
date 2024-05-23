@@ -75,7 +75,7 @@ function displayUsers() {
 }
 
 function goBack() {
-    window.location.href = '../admin_page.html'; 
+    window.location.href = './admin_page.html'; 
 }
 
 document.addEventListener('DOMContentLoaded', displayUsers);
