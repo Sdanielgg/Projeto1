@@ -38,7 +38,6 @@ h1 {
 
 .card:hover {
   background-color: #6693be;
-  transform: scale(1.05);
   color: #000;
 }
 

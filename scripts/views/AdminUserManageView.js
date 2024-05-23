@@ -26,7 +26,7 @@ function displayUsers() {
                         <button class="btn btn-warning btn-sm me-1 unblock-btn" data-username="${user.username}">
                             <i class="fas fa-lock"></i> Unblock
                         </button>
-                        <button class="btn btn-primary btn-sm delete-btn" data-username="${user.username}">
+                        <button class="btn btn-secondary btn-sm delete-btn" data-username="${user.username}">
                             <i class="fas fa-trash-alt"></i> Delete
                         </button>
                     </div>

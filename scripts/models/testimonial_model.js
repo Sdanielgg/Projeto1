@@ -1,4 +1,3 @@
-// TestimonialModel.js
 export class Testimonial {
   constructor(name, title, date, messageBody, image) {
       this.image = image 

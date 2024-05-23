@@ -8,10 +8,9 @@ body {
     color: white;
 }
 
-h1 {
+h1, h2 {
     font-family: 'Source Code Pro', monospace;
 }
-
 #backButton {
     background-color: #8faecf;
     color: rgb(0, 0, 0);
@@ -19,6 +18,7 @@ h1 {
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
+    margin-bottom: 20px; 
   }
   
   #backButton:hover {
@@ -28,44 +28,71 @@ h1 {
   #backButton i {
     margin-right: 5px;
   }
+
+form {
+    background-color: #526c85;
+    color: white;
+    border-radius: 10px;
+}
+
+form .form-control {
+    background-color: #caddee;
+    border: none;
+}
+
+form .form-control:focus {
+    box-shadow: none;
+}
+
+form .btn-primary {
+    background-color: #8faecf;
+    color: black;
+    border: none;
+}
+
+form .btn-primary:hover {
+    background-color: #6d859f;
+}
+
 #projectList {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
-    padding: 20px;
 }
 
 .project-card {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #e1e1e1;
+    background-color: #526c85;
+    border: none;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    color: white;
+    flex: 1 1 calc(33.333% - 20px);
+    display: flex;
+    flex-direction: column;
 }
 
 .project-image {
     width: 100%;
     height: auto;
     object-fit: cover;
-    border-bottom: 1px solid #e1e1e1;
 }
 
 .card-body {
-    padding: 10px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .card-title {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
 .card-subtitle {
-    font-size: 1rem;
-    color: #6c757d;
+    font-size: 1.25rem;
+    color: #d1d1d1;
 }
 
 .card-text {
@@ -75,4 +102,10 @@ h1 {
 .btn-danger {
     align-self: flex-end;
     margin-top: 10px;
+    background-color: #d9534f;
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: #c9302c;
 }
