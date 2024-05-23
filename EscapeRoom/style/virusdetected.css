@@ -49,3 +49,14 @@ body{
     position: fixed; 
     top: 48%;
 }
+
+#resolver{
+    font-family:Cascadia;
+    text-decoration: underline;
+    color: #FFFCF2;
+    font-size: 30px;
+    text-align: center;
+    justify-content:left;
+    position: fixed; 
+    top: 75%;
+}
