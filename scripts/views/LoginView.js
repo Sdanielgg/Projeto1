@@ -60,10 +60,11 @@ function wait(ms) {
 function loginUser() {
     const username = document.querySelector('#Login input[placeholder="Username"]').value;
     const password = document.querySelector('#Login input[placeholder="Password"]').value;
+    const email =document.querySelector('#Login input[placeholder="Email"]').value;
 
     let users = JSON.parse(localStorage.getItem('users')) || [];
 
-    const userIndex = users.findIndex(u => u.username === username && u.password === password);
+    const userIndex = users.findIndex(u => u.username === username && u.password === password && u.email===email);
 
     if (userIndex !== -1) {
         if (users[userIndex].status === 'blocked') {
@@ -71,7 +72,6 @@ function loginUser() {
         } else {
             users[userIndex].status = "active";
             localStorage.setItem('users', JSON.stringify(users));
-
             handleLoginSuccess();
         }
     } else {

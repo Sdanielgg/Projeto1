@@ -6,13 +6,22 @@
     <title>TSIW-EscapeRoom</title>
     <meta name="description" content="Projeto 1 TSIW">
     <meta name="keywords" content="HTML, CSS, JavaScript">
-    <meta name="author" content="Sérgio Gonçalves, Gonçalo Chaves, Samuel Fernandes">
+    <meta name="author" content="Sérgio Gonçalves, Gonçalo Chaves, Samuel Fernandes">4
+    <link rel="stylesheet" href="./Style/global.css">
 </head>
 <body>
     <nav>
-        <div><a href="main.html"><img id="logo" src="./images/logo.svg"></a></div>
-        <div class="avatar"><a><img id="avatar" src="./images/avatares/avatar1.svg"></a></div>
-    </nav>
+        <a href="main.html"><img id="logo" src="./images/logo.svg"></a>
+       <a href="profile.html"><img id="avatar" src="./images/avatares/avatar1.svg"></a>
+    </nav>        
+    <div class="subNav-Container">
+        <div class="subNav">
+            <a href="testimonials.html" style="color: white;"><button>Informações</button></a>
+            <a href="testimonials.html" style="color: white;"><button>Projetos</button></a>
+            <a href="testimonials.html" style="color: white;"><button>Testemunhos</button></a>
+            <a href="testimonials.html" style="color: white;"><button>Eventos</button></a>
+        </div>
+    </div>
     <div class="gameWindow">
         <!-- isto vai ser um image map com botoes ou isso ou talvez a imagem é so background e os botões para as perguntas ficam por cima com alteração da imagem com o seu progresso ou 
         alteração de outras coisas -->
@@ -22,20 +31,12 @@
 <style>
     body{
         background-color: #001233;
-    }
-    /* navigation bar */
-    nav{
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 2vh;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
     }
-    #logo{
-        width: 30vh;
-    } 
-    #avatar{
-        width: 15vh;
-    }
+   
     /* Playable escape room */
     .gameWindow{
         padding: 3vh;

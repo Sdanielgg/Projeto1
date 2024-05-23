@@ -10,21 +10,22 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="./Style/global.css"></script>
+    <link rel="stylesheet" href="./Style/global.css">
 </head>
 <body>
     <nav>
         <a href="main.html"><img id="logo" src="./images/logo.svg"></a>
-        <div class="subNav">
-        <a href="testimonials.html">Informações</a>
-            <a href="testimonials.html">Projetos</a>
-            <a href="testimonials.html">Testemunhos</a>
-            <a href="testimonials.html">Eventos</a>
-        </div>
        <a href="profile.html"><img id="avatar" src="./images/avatares/avatar1.svg"></a>
-    </nav>
-
-
+    </nav>        
+    <div class="subNav-Container">
+        <div class="subNav">
+            <a href="testimonials.html" style="color: white;"><button>Informações</button></a>
+            <a href="testimonials.html" style="color: white;"><button>Projetos</button></a>
+            <a href="testimonials.html" style="color: white;"><button>Testemunhos</button></a>
+            <a href="testimonials.html" style="color: white;"><button>Eventos</button></a>
+        </div>
+    </div>
+    <br>
     <div class="container">
         <br>
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -181,32 +182,6 @@ function loadPost(postTitle, imagePath, text) {
     }
     /* navigation bar */
 
-    nav{
-        width: 100%;
-        padding: 2vh;
-        display:flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .subNav{
-        
-        display:flex;
-        flex-direction: row;
-        justify-content: space-around;
-        border: 0px solid;
-        font-size: 3vh;
-    }
-    
-    #logo{
-        width: 15vh;
-        
-    } 
-
-    #avatar{
-        width: 10vh;
-        justify-content: right;
-    }
 
     /* site content */
     .content{
