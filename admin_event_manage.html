@@ -14,27 +14,27 @@
 
 <div class="container mt-5">
     <button id="backButton" onclick="goBack()" class="btn btn-secondary mt-3">
-        <i class="fas fa-arrow-left"></i> Go Back
+        <i class="fas fa-arrow-left"></i> Voltar Atrás
     </button>
-    <h1 class="text-center mt-5">Event Management</h1>
+    <h1 class="text-center mt-5">Gestão de Eventos</h1>
 
     <form id="eventForm" class="mt-4 p-4 shadow-sm rounded">
         <div class="mb-3">
-            <label for="eventName" class="form-label">Name</label>
+            <label for="eventName" class="form-label">Nome</label>
             <input type="text" class="form-control" id="eventName" required>
         </div>
         <div class="mb-3">
-            <label for="eventMessage" class="form-label">Message</label>
+            <label for="eventMessage" class="form-label">Mensagem</label>
             <textarea class="form-control" id="eventMessage" rows="3" required></textarea>
         </div>
         <div class="mb-3">
-            <label for="eventImage" class="form-label">Upload Image</label>
+            <label for="eventImage" class="form-label">Upload de Imagem</label>
             <input type="file" class="form-control" id="eventImage" accept="image/*">
         </div>
-        <button type="submit" class="btn btn-primary">Submit Event</button>
+        <button type="submit" class="btn btn-primary">Submeter Evento</button>
     </form>
 
-    <h2 class="text-center mt-5">Existing Events</h2>
+    <h2 class="text-center mt-5">Eventos Existentes</h2>
     <div id="eventList" class="row mt-3"></div>
 </div>
 

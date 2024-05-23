@@ -37,7 +37,7 @@ function displayProjects() {
             projectMessage.classList.add('card-text');
 
             const deleteButton = document.createElement('button');
-            deleteButton.textContent = 'Delete';
+            deleteButton.textContent = 'Eliminar';
             deleteButton.classList.add('btn', 'btn-danger');
             deleteButton.addEventListener('click', () => {
                 deleteProject(index);
