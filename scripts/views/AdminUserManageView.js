@@ -18,16 +18,16 @@ function displayUsers() {
                 <div class="card-body">
                     <h5 class="card-title">${user.username}</h5>
                     <p class="card-text">Email: ${user.email}</p>
-                    ${user.status === 'blocked' ? '<span class="badge bg-danger">Blocked</span>' : ''}
+                    ${user.status === 'blocked' ? '<span class="badge bg-danger">Bloqueado</span>' : ''}
                     <div class="account-actions mt-3">
                         <button class="btn btn-danger btn-sm me-1 block-btn" data-username="${user.username}">
-                            <i class="fas fa-ban"></i> Block
+                            <i class="fas fa-ban"></i> Bloquear
                         </button>
                         <button class="btn btn-warning btn-sm me-1 unblock-btn" data-username="${user.username}">
-                            <i class="fas fa-lock"></i> Unblock
+                            <i class="fas fa-lock"></i> Desbloquear
                         </button>
-                        <button class="btn btn-primary btn-sm delete-btn" data-username="${user.username}">
-                            <i class="fas fa-trash-alt"></i> Delete
+                        <button class="btn btn-secondary btn-sm delete-btn" data-username="${user.username}">
+                            <i class="fas fa-trash-alt"></i> Eliminar
                         </button>
                     </div>
                 </div>

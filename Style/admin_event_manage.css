@@ -54,13 +54,13 @@ form .btn-primary:hover {
     background-color: #6d859f;
 }
 
-#projectList {
+#eventList {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
 }
 
-.project-card {
+.event-card {
     background-color: #526c85;
     border: none;
     border-radius: 10px;
@@ -72,7 +72,7 @@ form .btn-primary:hover {
     flex-direction: column;
 }
 
-.project-image {
+.event-image {
     width: 100%;
     height: auto;
     object-fit: cover;

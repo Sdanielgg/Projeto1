@@ -14,39 +14,38 @@
 
 <div class="container mt-5">
     <button id="backButton" onclick="goBack()" class="btn btn-secondary mt-3">
-        <i class="fas fa-arrow-left"></i> Go Back
+        <i class="fas fa-arrow-left"></i> Voltar Atrás
     </button>
-    <h1 class="text-center mt-5">Testimonial Management</h1>
+    <h1 class="text-center mt-5">Gestão de Testemnunhos</h1>
 
     <form id="testimonialForm" class="mt-4 p-4 shadow-sm rounded">
         <div class="mb-3">
-            <label for="testimonialName" class="form-label">Name</label>
+            <label for="testimonialName" class="form-label">Nome</label>
             <input type="text" class="form-control" id="testimonialName" required>
         </div>
         <div class="mb-3">
-            <label for="testimonialTitle" class="form-label">Title</label>
+            <label for="testimonialTitle" class="form-label">Título</label>
             <input type="text" class="form-control" id="testimonialTitle" required>
         </div>
         <div class="mb-3">
-            <label for="testimonialMessage" class="form-label">Message</label>
+            <label for="testimonialMessage" class="form-label">Mensagem</label>
             <textarea class="form-control" id="testimonialMessage" rows="3" required></textarea>
         </div>
         <div class="mb-3">
-            <label for="testimonialDate" class="form-label">Date</label>
+            <label for="testimonialDate" class="form-label">Data</label>
             <input type="date" class="form-control" id="testimonialDate" required>
         </div>
         <div class="mb-3">
-            <label for="testimonialImage" class="form-label">Upload Image</label>
+            <label for="testimonialImage" class="form-label">Upload de Imagem</label>
             <input type="file" class="form-control" id="testimonialImage" accept="image/*">
         </div>
-        <button type="submit" class="btn btn-primary">Submit Testimonial</button>
+        <button type="submit" class="btn btn-primary">Submeter Testemunho</button>
     </form>
 
-    <h2 class="text-center mt-5">Existing Testimonials</h2>
+    <h2 class="text-center mt-5">Testemunhos Existentes</h2>
     <div id="testimonialList" class="row mt-3"></div>
 </div>
 
-<script src="./scripts/models/TestimonialModel.js" type="module"></script>
 <script src="./scripts/views/AdminTestimonialView.js" type="module"></script>
 <script>
     function goBack() {
