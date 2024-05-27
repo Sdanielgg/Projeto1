@@ -114,3 +114,13 @@ form .btn-primary:hover {
 .btn-danger:hover {
     background-color: #c9302c;
 }
+
+.card-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-buttons .btn {
+    flex: 1;
+    margin: 5px;
+}
