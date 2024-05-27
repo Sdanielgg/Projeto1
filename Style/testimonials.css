@@ -5,43 +5,57 @@ body{
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    font-family: Arial, sans-serif;
+    font-family: 'Viga';
     margin: 0;
     padding: 0;
 }
 
 .testemunho {
-    height: 60px;
     width: 400px;
-    background-color: #fff;
-    border: 1px solid #ccc;
+    background-color: #acbadb;
+    border: 3px solid #6b7897;
     margin: 20px;
-    padding: 10px;
-    transition:all 0.3s ease;
-    float: left;
+    padding: 20px; 
     box-sizing: border-box;
     text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px; 
 }
+
 .testemunho:hover {
-    height: 150px;
-    width: 500px;
+    width: 450px; 
+    padding: 30px; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
 }
+
 .nome {
     font-weight: bold;
+    font-size: 1.2em; 
+    margin-bottom: 10px; 
 }
+
 .conteudo {
     display: none;
-    height: 100px;
-    width: 400px;
-    transition:all 0.3s ease;
-    justify-content: center;
-
+    transition: all 0.3s ease;
 }
+
 .testemunho:hover .conteudo {
     display: block;
-    height: 150px;
-    width: 450px;
+    margin-top: 20px; 
 }
+
+.testemunho .image {
+    margin-bottom: 10px;
+}
+
+.testemunho img {
+    max-width: 50%; 
+    height: auto;
+    border-radius: 10px; 
+    object-fit: cover;
+}
+
 .clear {
     clear: both;
 }
@@ -62,25 +76,44 @@ nav{
     width: 15vh;
 }
 
-/* site content */
 .content{
     background-color: #7D8597;
     width: 70%;
 }
-.subNav{
+.subNav {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    color:white;
-    border: 0px solid;
-    border-radius: 10px;
+    align-items: center;
+    color: white;
     background-color: #7D8597;
-    font-size: 3vh;
+    font-size: 2.5vh;
+    padding: 1vh; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
-.subNav-Container{
+.subNav button {
+    height: 5vh;
+    width: 100%;
+    border: 0;
+    border-radius: 10px;
+    background-color: #7D8597;
+    margin: 3px;
+    padding: 0.5vh; 
+    color: white; 
+    transition: background-color 0.3s ease; 
+    cursor: pointer; 
+}
+
+.subNav button:hover {
+    background-color: grey;
+}
+
+.subNav-Container {
     display: flex;
-    justify-content:  center;
+    justify-content: center;
+    margin-top: 2vh; 
 }
 
 button{
