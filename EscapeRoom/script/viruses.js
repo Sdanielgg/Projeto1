@@ -8,10 +8,10 @@ function getRandomDirection() {
 }
 
 const images = [
-    {element: document.getElementById('img1'), x: 50, y: 50, ...getRandomDirection(), url: 'intro.html', originalSrc: 'style/images/virus.png', hoverSrc: 'style/images/greenVirus.png'},
-    {element: document.getElementById('img2'), x: 200, y: 200, ...getRandomDirection(), url: 'intro.html', originalSrc: 'style/images/virus.png', hoverSrc: 'style/images/greenVirus.png'},
-    {element: document.getElementById('img3'), x: 350, y: 50, ...getRandomDirection(), url: 'intro.html', originalSrc: 'style/images/virus.png', hoverSrc: 'style/images/greenVirus.png'},
-    {element: document.getElementById('img4'), x: 500, y: 200, ...getRandomDirection(), url: 'intro.html', originalSrc: 'style/images/virus.png', hoverSrc: 'style/images/greenVirus.png'},
+    {element: document.getElementById('img1'), x: 50, y: 50, ...getRandomDirection(), url: 'room1.html', originalSrc: 'style/images/virus.png', hoverSrc: 'style/images/greenVirus.png'},
+    {element: document.getElementById('img2'), x: 200, y: 200, ...getRandomDirection(), url: 'room1.html', originalSrc: 'style/images/virus.png', hoverSrc: 'style/images/greenVirus.png'},
+    {element: document.getElementById('img3'), x: 350, y: 50, ...getRandomDirection(), url: 'room1.html', originalSrc: 'style/images/virus.png', hoverSrc: 'style/images/greenVirus.png'},
+    {element: document.getElementById('img4'), x: 500, y: 200, ...getRandomDirection(), url: 'room1.html', originalSrc: 'style/images/virus.png', hoverSrc: 'style/images/greenVirus.png'},
 ];
 
 images.forEach(img => {

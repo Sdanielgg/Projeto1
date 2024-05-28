@@ -1,0 +1,65 @@
+body {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #001233;
+    flex-direction: column;   
+}
+
+
+#windowPanel {
+    position: absolute;
+    top: 40px;
+    width: 1400px;
+    height: 500px;
+
+}
+
+@font-face {
+    font-family: "Cascadia";
+    src: url("fonts/Cascadia.ttf");
+  }
+
+.text-overlay {
+    position: absolute;
+    top: 150px; 
+    left: 18%;
+    transform: translateX(-50%);
+    font-family:Cascadia; 
+    color: #119822;
+    font-size: 18px;
+
+}
+.text-overlay2 {
+    position: absolute;
+    top: 150px; 
+    left: 18%;
+    transform: translateX(-50%);
+    font-family:Cascadia; 
+    color: #11982300;
+    font-size: 18px;
+
+}
+
+.botoes {
+    position: absolute;
+    bottom: 85px;
+    display: flex;
+    gap: 20px;
+}
+.botao {
+    padding: 30px 70px;
+    background-color: #007bff3c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family:Cascadia; 
+    color: #119822;
+    font-size: 18px;
+
+}
+.botao:hover {
+    background-color: #0056b3;
+}
