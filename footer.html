@@ -42,25 +42,30 @@
     <div class="testemunhos_buttons">
 
     </div>
-    <footer style="background-color: #002855;" >
-        <div class="footer_image_buttons">
-            <div class="footer_image">
-                <img class  ="logo"  src="./images/logo.svg">
+    <footer style=" flex-direction: column;" >
+        <div style="display: flex;background-color: #002855; justify-content: center;">
+            <div class="footer_image_buttons">
+                <div class="footer_image">
+                    <img class  ="logo"  src="./images/icons/TSIW Nerve Center.svg">
+                </div>
+                <div class="footer_buttons">
+                    <a>Introdução</a>
+                    <a>Informações</a>
+                    <a>Eventos</a>
+                    <a>Testemunhos</a>
+                </div>
             </div>
-            <div class="footer_buttons">
-                <a>Introdução</a>
-                <a>Informações</a>
-                <a>Eventos</a>
-                <a>Testemunhos</a>
+            
+            <div class="social_media_icons">
+                <a class="footer_icon" href="https://www.facebook.com/groups/comunidade.tsiw/"><img src="./images/icons/facebook-svgrepo-com.svg" ></a>
+                <a class="footer_icon" href="https://www.instagram.com/_tsiw.esmad_/"><img src="./images/icons/instagram-svgrepo-com.svg"></a>
+                <a class="footer_icon" href="https://www.instagram.com/_tsiw.esmad_/"><img src="./images/icons/twitter-svgrepo-com.svg"></a>
+                <a><img></a>
             </div>
         </div>
-        
-        <div class="social_media_icons">
-            <a href="https://www.facebook.com/groups/comunidade.tsiw/"><img src="./images/icons/facebook_icon.svg" ></a>
-            <a href="https://www.instagram.com/_tsiw.esmad_/"><img src="./images/icons/instagram_icon.svg"></a>
-            <a><img></a>
-        </div>
+         <div style="background-color: #33415C; color: white;">  @TSIW Nerve Center 2024</div>
     </footer>
+   
     <style>
     
         
@@ -89,7 +94,7 @@
         }
         .footer_image_buttons{
             display: flex;
-            margin: 10vh;
+            margin: 7vh; 
         }
         .footer_image{
             display: flex;
@@ -100,7 +105,11 @@
             display: flex;
             flex-direction: column;
         }
-        
+        .social_media_icons{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
     </style>
 </body>
 </html>
