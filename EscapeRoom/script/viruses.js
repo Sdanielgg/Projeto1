@@ -14,6 +14,11 @@ const images = [
     {element: document.getElementById('img4'), x: 500, y: 200, ...getRandomDirection(), url: 'room1.html', originalSrc: 'style/images/virus.png', hoverSrc: 'style/images/greenVirus.png'},
 ];
 
+const fillInBlanksDone = localStorage.getItem('fillInBlanksDone') === 'true';
+if(fillInBlanksDone == true){
+    document.getElementById("img1").src = "style/images/greenVirus.png"
+}
+
 images.forEach(img => {
 
     img.element.addEventListener('click', () => {

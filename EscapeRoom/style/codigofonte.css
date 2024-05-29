@@ -21,25 +21,29 @@ body {
     src: url("fonts/Cascadia.ttf");
   }
 
-.text-overlay {
+  
+  #vistoVerde{
     position: absolute;
+    transition: opacity 1s ease-in-out;
+    top: 150px; 
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+.text {
+    position: absolute;
+    transition: opacity 1s ease-in-out;
     top: 150px; 
     left: 18%;
     transform: translateX(-50%);
     font-family:Cascadia; 
     color: #119822;
     font-size: 18px;
-
 }
-.text-overlay2 {
-    position: absolute;
-    top: 150px; 
-    left: 18%;
-    transform: translateX(-50%);
-    font-family:Cascadia; 
-    color: #11982300;
-    font-size: 18px;
 
+.hidden {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .botoes {

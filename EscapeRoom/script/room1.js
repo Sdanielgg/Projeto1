@@ -38,13 +38,20 @@ retangulo.addEventListener("click", function() {
 botao2.addEventListener("click", function(){
     if(texto.textContent == textos[2]){
         texto.textContent = textos2[0];
-        
+        botao1.textContent = "<footer>";
+        botao2.textContent = "<body>";
+        botao3.textContent = "<head>";
+        botao4.textContent = "<script>";
     }
 })
 
 botao3.addEventListener("click", function(){
     if(texto.textContent == textos2[0]){
         texto.textContent = textos2[1];
+        botao1.textContent = "font-family";
+        botao2.textContent = "text-font";
+        botao3.textContent = "font-size";
+        botao4.textContent = "<typography>";
         
     }
 })
