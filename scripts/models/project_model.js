@@ -1,4 +1,4 @@
-export class Project {
+class Project {
     constructor(name, messageBody, image) {
         this.image = image 
         this.name = name;

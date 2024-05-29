@@ -1,4 +1,4 @@
-export class Event {
+class Event {
     constructor(name, messageBody, image) {
         this.image = image 
         this.name = name;
