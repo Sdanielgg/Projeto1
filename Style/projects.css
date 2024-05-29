@@ -1,0 +1,149 @@
+body {
+    background-color: #001233;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Viga';
+    margin: 0;
+    padding: 0;
+}
+
+.projeto {
+    width: 90%; 
+    max-width: 600px; 
+    background-color: #acbadb;
+    border: 3px solid #6b7897;
+    margin: 20px auto; 
+    padding: 20px; 
+    box-sizing: border-box;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px; 
+    overflow: auto; 
+}
+
+.projeto:hover {
+    width: 100%; 
+    padding: 30px; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+}
+
+.nome {
+    font-weight: bold;
+    font-size: 1.2em; 
+    margin-bottom: 10px; 
+}
+
+.conteudo {
+    display: none;
+    transition: all 0.3s ease;
+}
+
+.projeto:hover .conteudo {
+    display: block;
+    margin-top: 20px; 
+}
+
+.projeto .image {
+    margin-bottom: 10px;
+}
+
+.projeto img {
+    max-width: 50%; 
+    height: auto;
+    border-radius: 10px; 
+    object-fit: cover;
+}
+
+.clear {
+    clear: both;
+}
+
+nav{
+    width: 100%;
+    padding: 2vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#logo{
+    width: 30vh;
+} 
+
+#avatar{
+    width: 15vh;
+}
+
+.content{
+    background-color: #7D8597;
+    width: 70%;
+}
+.subNav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    background-color: #7D8597;
+    font-size: 2.5vh;
+    padding: 1vh; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.subNav button {
+    height: 5vh;
+    width: 100%;
+    border: 0;
+    border-radius: 10px;
+    background-color: #7D8597;
+    margin: 3px;
+    padding: 0.5vh; 
+    color: white; 
+    transition: background-color 0.3s ease; 
+    cursor: pointer; 
+}
+
+.subNav button:hover {
+    background-color: grey;
+}
+
+.subNav-Container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2vh; 
+}
+
+button{
+    height: 5vh;
+    width: 100%;
+    border: 0;
+    border-radius: 10px;
+    background-color: #7D8597;
+    margin: 3px;
+}
+button:hover{
+    height: 5vh;
+    width: 100%;
+    border: 0;
+    background-color:grey;
+}
+
+::-webkit-scrollbar {
+    width: 12px; 
+}
+
+::-webkit-scrollbar-track {
+    background: #acbadb; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #6b7897; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #32487a; 
+}
