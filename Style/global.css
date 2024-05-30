@@ -44,7 +44,6 @@ button:hover{
     background-color:grey;
 }
 
-
 .logo{
     width: 20vh;
 
@@ -52,4 +51,56 @@ button:hover{
 
 #avatar{
     width: 10vh;
+}
+/* Footer */
+
+footer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    font-family: cascadia Code;
+}
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #002855;
+}
+.footer_image_buttons_container{
+    display: flex;
+    margin: 7vh; 
+}
+.footer_image_container{
+    display: flex;
+    justify-content: center;
+}
+.footer_image{
+    width: 15vh;
+}
+.footer_buttons_container{
+    margin: 5vh;
+    display: flex;
+    flex-direction: column;
+}
+.footer_buttons_text{
+    color: white;
+    font-size: 3vh;
+}
+.footer_icons_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer_icon{
+    margin: 1vh;
+}
+.footer_icon_image{
+    width:6vh;
+}
+.footer_copyright{
+    background-color: #33415C; 
+    color: white;
+    font-size: 3vh;
+    padding: 2vh;
 }
