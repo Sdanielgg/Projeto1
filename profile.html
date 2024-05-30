@@ -28,10 +28,16 @@
     </div>
     <div class="Configuracoes"style="display: none;" id="uChanges" >
         <div  class="Entries" id="Confs">
-             <input type="text" class="form-control form-control-lg" placeholder="Utilizador"></input>
-            <input type="password" min="6" max="10" class="form-control form-control-lg" placeholder="Password"></input>
-            <input type="password" min="6" max ="10" class="form-control form-control-lg" placeholder="Confirmar Password"></input>
-            <button style="width: 30vh;">Confirmar Alterações</button>
+            <div class="d-grid gap-2">
+                <input type="text" class="form-control form-control-lg" placeholder="Username">
+                <input type="password" class="form-control form-control-lg" placeholder="Password">
+                <input type="email" class="form-control form-control-lg mb-2" placeholder="Confirm Password">
+            </div>
+            <div>
+                <button id="confirmButton">Confirmar Alterações</button>
+            </div>
+        </div>
+            
         </div>
     </div>
     <div class="avatar"style="display:none;" id="avatarChanges">
@@ -57,24 +63,7 @@
 
     </div> 
 </body>
-
-<script>
-    let userInfo=document.getElementById("uInfo")
-    let userChanges=document.getElementById("uChanges")
-    let avatarChanges=document.getElementById("avatarChanges")
-    let buttonUserEdit=document.getElementById("userEdit")
-    let buttonAvatarChange=document.getElementById("avatarChange")
-
-    buttonUserEdit.addEventListener("click",(event)=>{
-        userInfo.style.display="none"
-        userChanges.style.display="flex";
-        })
-    buttonAvatarChange.addEventListener("click",(event)=>{
-        userInfo.style.display="none";
-        avatarChanges.style.display="flex"
-    })
-
-</script>
+<script src="./scripts/views/UserProfileView.js"></script>
 <style>
 
     body{
