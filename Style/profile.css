@@ -1,0 +1,82 @@
+body{
+    background-color: #001233;
+}
+/* navigation bar */
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2vh;
+}
+
+#logo{
+    width: 30vh;
+} 
+#avatar{
+    width: 30vh;
+}
+/* content */
+.avatarHolder{
+    display: flex;
+    justify-content: center;
+}
+.buttonsHolder{
+    display: flex;
+    justify-content: center;
+}
+button{
+    height: 5vh;
+    margin: 2vh;
+    width: 20vh;
+    border: 0;
+    border-radius: 10px;
+    font-size: large;
+}
+button:hover{
+    height: 5vh;
+    width: 20vh;
+    border: 0;
+    background-color:grey;
+}
+#Username{
+    color: white;
+    font-size: 5vh;
+}
+.title{
+    display: flex;
+    justify-content: center;
+}
+.Configuracoes{
+    display: flex;
+    justify-content: center;
+}
+input{
+    width: 30vh;
+    height: 3vh;
+    margin: 10px;
+    
+}
+.Entries{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #001233;
+    width: 50vh;
+    padding: 5vw;
+    border-radius:10px ;
+    height: 50vh;
+}
+.avatar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.currentAvatar{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.smallAvatar{
+    margin: 10px;
+    width: 15vh;
+}

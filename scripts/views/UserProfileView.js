@@ -21,6 +21,18 @@ let buttonUserEdit=document.getElementById("userEdit")
 let buttonAvatarChange=document.getElementById("avatarChange")
 
 
+buttonAvatarChange.addEventListener("click",()=>{
+    buttonAvatarChange.style.display="none";
+    buttonUserEdit.style.display="none";
+    avatarChanges.style.display="flex";
+    userChanges.style.display="none"
+})
+buttonUserEdit.addEventListener("click",()=>{
+    buttonAvatarChange.style.display="none";
+    buttonUserEdit.style.display="none";
+    avatarChanges.style.display="none";
+    userChanges.style.display="flex"
+})
 
 UserDisplay()
 
@@ -31,7 +43,7 @@ function changeCredentials() {
     const confirmPassword =document.querySelector('#Confs input[placeholder="Confirm Password"]').value;
 
     if (newUsername !== null && newUsername !== "" && newPassword !== null && newPassword === confirmPassword){
-        let users = JSON.parse(localStorage.getItem('users')) || [];
+        let users = JSON.parse(localStorage.getItem("users")) || [];
 
         const userIndex = users.findIndex(u => u.status==="active");
 
@@ -39,14 +51,23 @@ function changeCredentials() {
         if (userIndex !== -1) {
                 users[userIndex].username=newUsername
                 users[userIndex].password=newPassword
-                localStorage.setItem('users', JSON.stringify(users));
+                localStorage.setItem("users", JSON.stringify(users));
                 handleLoginSuccess();
             }
         }else{
             console.log("whoops nao deu :(")
         }
     }
+    function changeAvatar(){
+        const newAvatar=document.getElementById("avatar").src
+        let users = JSON.parse(localStorage.getItem("users")) || [];
+        const userIndex=users.findIndex(u=>u.status==="active")
 
+        if (userIndex!==-1){
+            users[userIndex].avatar=newAvatar
+            localStorage.setItem("users".JSON.stringify(users));
+        }
+    }
     
     
     function wait(ms) {
@@ -61,11 +82,5 @@ function changeCredentials() {
         window.location.href = "./profile.html"
       }
 document.getElementById("confirmButton").addEventListener("click", changeCredentials);
-buttonUserEdit.addEventListener("click",(event)=>{
-    userInfo.style.display="none"
-    userChanges.style.display="flex";
-    })
-buttonAvatarChange.addEventListener("click",(event)=>{
-    userInfo.style.display="none";
-    avatarChanges.style.display="flex"
-})
+
+
