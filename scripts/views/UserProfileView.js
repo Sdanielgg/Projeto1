@@ -52,35 +52,44 @@ function changeCredentials() {
                 users[userIndex].username=newUsername
                 users[userIndex].password=newPassword
                 localStorage.setItem("users", JSON.stringify(users));
-                handleLoginSuccess();
+                handleChange();
             }
         }else{
             console.log("whoops nao deu :(")
         }
     }
-    function changeAvatar(){
-        const newAvatar=document.getElementById("avatar").src
-        let users = JSON.parse(localStorage.getItem("users")) || [];
-        const userIndex=users.findIndex(u=>u.status==="active")
-
-        if (userIndex!==-1){
-            users[userIndex].avatar=newAvatar
-            localStorage.setItem("users".JSON.stringify(users));
-        }
+    function changeAvatar(clickedId){
+        let newAvatar=document.getElementById(clickedId).src
+        let selectedAvatar=document.getElementById("Avatar")
+        console.log(selectedAvatar)
+        console.log(newAvatar)
+        selectedAvatar.src=newAvatar
     }
+    function confirmAvatar() {
+        let newAvatarSrc = document.getElementById("Avatar").src;
+        let users = JSON.parse(localStorage.getItem("users")) || [];
+        const userIndex = users.findIndex(u => u.status === "active");
+    
+        if (userIndex !== -1) {
+            users[userIndex].avatar = newAvatarSrc;
+            localStorage.setItem("users", JSON.stringify(users));
+        }
+        UserDisplay()
+        handleChange(500)
+        
+    }
+    
     
     
     function wait(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
       }
       
-      async function handleLoginSuccess() {
-        displayAlert('Login successful!', 'success');
+      async function handleChange() {
         
         await wait(1000); // Wait for 1 second (1000 milliseconds)
         
-        window.location.href = "./profile.html"
+        window.location.href = "./profile.html";
       }
-document.getElementById("confirmButton").addEventListener("click", changeCredentials);
 
 

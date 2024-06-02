@@ -34,27 +34,25 @@
             <div class="d-grid gap-2">
                 <input type="text" class="form-control form-control-lg" placeholder="Username">
                 <input type="password" class="form-control form-control-lg" placeholder="Password">
-                <input type="email" class="form-control form-control-lg mb-2" placeholder="Confirm Password">
-            </div>
-            <div>
-                <button id="confirmButton">Confirmar Alterações</button>
+                <input type="password" class="form-control form-control-lg" placeholder="Confirm Password">
+                <button id="confirmButton" onclick="changeCredentials()">Confirmar Alterações</button>
             </div>
         </div>
     </div>
     <div class="avatar"  id="avatarChanges" style="display: none;">
         <div>
             <div>
-                <img class="smallAvatar" src="./images/avatares/avatar1.svg" alt="Avatar 1">
-                <img class="smallAvatar" src="./images/avatares/avatar2.svg" alt="Avatar 2">
-                <img class="smallAvatar" src="./images/avatares/avatar3.svg" alt="Avatar 3">
+                <img id="avatar1" class="smallAvatar" src="./images/avatares/avatar1.svg" alt="Avatar 1" onclick="changeAvatar(this.id)">
+                <img id="avatar2" class="smallAvatar" src="./images/avatares/avatar2.svg" alt="Avatar 2" onclick="changeAvatar(this.id)">
+                <img id="avatar3" class="smallAvatar" src="./images/avatares/avatar3.svg" alt="Avatar 3"onclick="changeAvatar(this.id)">
             </div>
             <div>
-                <img class="smallAvatar" src="./images/avatares/avatar4.svg" alt="Avatar 4">
-                <img class="smallAvatar" src="./images/avatares/avatar5.svg" alt="Avatar 5">
-                <img class="smallAvatar" src="./images/avatares/avatar6.svg" alt="Avatar 6">
+                <img id="avatar4" class="smallAvatar" src="./images/avatares/avatar4.svg" alt="Avatar 4"onclick="changeAvatar(this.id)">
+                <img id="avatar5" class="smallAvatar" src="./images/avatares/avatar5.svg" alt="Avatar 5" onclick="changeAvatar(this.id)">
+                <img id="avatar6" class="smallAvatar" src="./images/avatares/avatar6.svg" alt="Avatar 6" onclick="changeAvatar(this.id)">
             </div>
             <div>
-                <button id="confirmButton">Confirmar Alterações</button>
+                <button onclick="confirmAvatar()">Confirmar Alterações</button>
             </div>
         </div>
     </div> 
