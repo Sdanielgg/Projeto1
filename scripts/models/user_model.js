@@ -1,5 +1,5 @@
 class User {
-    constructor(nome, idade, sexo, localidade, email, username, password, status = "inactive", role = "regular") {
+    constructor(nome, idade, sexo, localidade, email, username, password, status = "inactive", role = "regular",avatar="./images/avatares/avatar1.svg") {
         this.nome = nome;
         this.idade = idade;
         this.sexo = sexo;
@@ -9,5 +9,6 @@ class User {
         this.password = password;
         this.status = status;
         this.role = role;
+        this.avatar=avatar;
     }
 }

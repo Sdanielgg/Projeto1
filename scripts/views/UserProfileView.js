@@ -1,13 +1,17 @@
-function UserDisplayName() {
+function UserDisplay() {
     const userName=document.getElementById("Username")
+    const avatar=document.getElementById("Avatar")
     console.log(userName.innerHTML)
+    console.log(avatar.src)
 
     let users = JSON.parse(localStorage.getItem('users')) || [];
 
     const userIndex = users.findIndex(u => u.status==="active");
 
-    text=users[userIndex].username
-    userName.innerHTML=text
+    usernameDisplay=users[userIndex].username
+    userName.innerHTML=usernameDisplay
+    avatarDisplay=users[userIndex].avatar
+    avatar.src=avatarDisplay
 
 }
 let userInfo=document.getElementById("uInfo")
@@ -18,7 +22,7 @@ let buttonAvatarChange=document.getElementById("avatarChange")
 
 
 
-UserDisplayName()
+UserDisplay()
 
 
 function changeCredentials() {
