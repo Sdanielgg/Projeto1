@@ -1,82 +1,87 @@
-body{
+body {
     background-color: #001233;
 }
+
 /* navigation bar */
-nav{
+nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 2vh;
 }
 
-#logo{
-    width: 30vh;
-} 
-#avatar{
+#logo {
     width: 30vh;
 }
+
+#avatar {
+    width: 30vh;
+}
+
 /* content */
-.avatarHolder{
+.avatarHolder {
     display: flex;
     justify-content: center;
 }
-.buttonsHolder{
+
+.buttonsHolder {
     display: flex;
     justify-content: center;
 }
-button{
+
+button {
     height: 5vh;
     margin: 2vh;
     width: 20vh;
     border: 0;
     border-radius: 10px;
-    font-size: large;
+    font-size: 14px; /* Adjusted font size for button text */
 }
-button:hover{
+
+button:hover {
     height: 5vh;
     width: 20vh;
     border: 0;
-    background-color:grey;
+    background-color: grey;
 }
-#Username{
+
+#Username {
     color: white;
     font-size: 5vh;
 }
-.title{
+
+.title {
     display: flex;
     justify-content: center;
 }
-.Configuracoes{
+
+.Configuracoes {
     display: flex;
     justify-content: center;
 }
-input{
-    width: 30vh;
+
+input {
+    width: 100%;
     height: 3vh;
-    margin: 10px;
-    
+    margin: 5px 0;
 }
-.Entries{
+
+.Entries {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background-color: #001233;
-    width: 50vh;
-    padding: 5vw;
-    border-radius:10px ;
-    height: 50vh;
+    padding: 1.5rem; 
+    border-radius: 10px;
 }
-.avatar{
+
+.avatar {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-.currentAvatar{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-.smallAvatar{
+
+.smallAvatar {
     margin: 10px;
     width: 15vh;
 }
