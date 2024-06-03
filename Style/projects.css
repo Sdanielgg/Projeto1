@@ -37,14 +37,11 @@ body {
 }
 
 .conteudo {
-    display: none;
+    display: block;
+    margin-top: 20px; 
     transition: all 0.3s ease;
 }
 
-.projeto:hover .conteudo {
-    display: block;
-    margin-top: 20px; 
-}
 
 .projeto .image {
     margin-bottom: 10px;

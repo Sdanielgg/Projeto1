@@ -37,13 +37,9 @@ body {
 }
 
 .conteudo {
-    display: none;
-    transition: all 0.3s ease;
-}
-
-.evento:hover .conteudo {
     display: block;
     margin-top: 20px; 
+    transition: all 0.3s ease;
 }
 
 .evento .image {

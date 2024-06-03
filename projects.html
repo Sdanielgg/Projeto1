@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="./Style/projects.css">
+    <link rel="stylesheet" href="./Style/global.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Viga&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Projetos - TSIW</title>
 </head>
 <body>
@@ -13,10 +15,12 @@
         <a href="main.html"><img id="logo" src="./images/logo.svg"></a>
        <a href="profile.html"><img id="avatar" src="./images/avatares/avatar1.svg"></a>
     </nav>
-
+    
     <div class="subNav-Container">
         <div class="subNav">
-            <button>Informações</button>
+            <a href="informations.html">
+                <button>Informações</button>
+            </a>
             <a href="projects.html">
                 <button>Projetos</button>
             </a>
@@ -31,8 +35,33 @@
 
 
     <div id="project-list"></div>
+    <footer>
+        <div class="footer">
+            <div class="footer_image_buttons_container">
+                <div class="footer_image_container">
+                    <img class  ="footer_image"  src="./images/icons/TSIW Nerve Center.svg">
+                </div>
+
+                <div class="footer_buttons_container">
+                    <a class="footer_buttons_text" href="./informations.html">Informações</a>
+                    <a class="footer_buttons_text" href="./projects.html">Projetos</a>
+                    <a class="footer_buttons_text" href="./testimonials.html">Testemunhos</a>
+                    <a class="footer_buttons_text" href="./events.html">Eventos</a>
+                    
+                </div>
+            </div>
+            
+            <div class="footer_icons_container">
+                <a class="footer_icon" href="https://www.facebook.com/groups/comunidade.tsiw/"><img class="footer_icon_image" src="./images/icons/facebook-svgrepo-com.svg" ></a>
+                <a class="footer_icon" href="https://www.instagram.com/_tsiw.esmad_/"><img class="footer_icon_image"  src="./images/icons/instagram-svgrepo-com.svg"></a>
+                <a class="footer_icon" href="https://www.instagram.com/_tsiw.esmad_/"><img class="footer_icon_image"  src="./images/icons/twitter-svgrepo-com.svg"></a>
+            </div>
+        </div>
+         <div class="footer_copyright">@TSIW Nerve Center 2024</div>
+    </footer>                              
     <script src="./scripts/models/project_model.js"></script>
     <script src="./scripts/views/ProjectView.js"></script>
+    <script src="./scripts/views/FooterView.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
