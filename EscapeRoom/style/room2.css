@@ -1,0 +1,76 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #001233;
+}
+
+@font-face {
+    font-family: "Cascadia";
+    src: url("fonts/Cascadia.ttf");
+  }
+  
+
+#texto {
+    font-family:Cascadia; 
+    color: #119822;
+    font-size: 30px; 
+    text-align: center; 
+    justify-content:left;
+}
+
+
+#center-rectangle {
+    position: absolute;
+    width: 1000px;
+    height: 400px; 
+    background-color: rgba(255, 255, 255, 0.767);
+    border-radius: 10px; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    z-index: 2; 
+    overflow: visible; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    transition: top 0.5s, transform 0.5s;
+}
+
+
+#hoot{
+    position: absolute;
+    width: 150px;
+    top: -10%; 
+    left: -5%; 
+    z-index: 2; 
+}
+
+#container {
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    cursor: pointer;
+    transition: top 0.5s, transform 0.5s;
+    
+}
+.button {
+    display: none;
+    margin: 10px;
+    padding: 20px;
+    background-color: lightgreen;
+    cursor: pointer;
+}
+
+.botao1{
+    position: absolute;
+    top: 10%;
+}
