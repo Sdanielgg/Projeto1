@@ -10,8 +10,8 @@ body {
 }
 
 .informação-1{
-    width: 90%; 
-    max-width: 600px; 
+    font-size: larger;
+    width: 90vh;
     background-color: #acbadb;
     border: 3px solid #6b7897;
     margin: 20px auto; 
@@ -22,14 +22,13 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 10px; 
     overflow: auto; 
-    width: 100%; 
     padding: 30px; 
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
 }
 
 .informação-2{
-    width: 90%; 
-    max-width: 600px; 
+    font-size: larger;
+    width: 90vh;
     background-color: #7586ac;
     border: 3px solid #111b34;
     margin: 20px auto; 
@@ -40,14 +39,13 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 10px; 
     overflow: auto; 
-    width: 100%; 
     padding: 30px; 
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
 }
 
 .informação-3{
-    width: 90%; 
-    max-width: 600px; 
+    font-size: large    ;
+    width: 90vh;
     background-color: #4c5e84;
     border: 3px solid #6b7897;
     color: white;
@@ -59,7 +57,6 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 10px; 
     overflow: auto; 
-    width: 100%; 
     padding: 30px; 
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
 }
@@ -70,10 +67,11 @@ body {
     font-size: 1.2em; 
     margin-bottom: 10px; 
 }
-
+.conditions{
+    margin-top: 4vh;
+}
 .conteudo {
     display: block;
-    margin-top: 20px; 
     transition: all 0.3s ease;
 }
 
