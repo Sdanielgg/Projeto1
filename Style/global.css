@@ -4,6 +4,9 @@ body{
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    font-family: 'Viga';
+    margin: 0;
+    padding: 0;
 }
  /* navigation bar */
 
@@ -29,6 +32,42 @@ body{
     display: flex;
     justify-content:  center;
 }
+
+.subNav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    background-color: #7D8597;
+    font-size: 2.5vh;
+    padding: 1vh; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.subNav button {
+    height: 5vh;
+    width: 100%;
+    border: 0;
+    border-radius: 10px;
+    background-color: #7D8597;
+    margin: 3px;
+    padding: 0.5vh; 
+    color: white; 
+    transition: background-color 0.3s ease; 
+    cursor: pointer; 
+}
+
+.subNav button:hover {
+    background-color: grey;
+}
+
+.subNav-Container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2vh; 
+}
 button {
     height: 5vh;
     width: 100%;
@@ -44,13 +83,13 @@ button:hover{
     background-color:grey;
 }
 
-.logo{
-    width: 20vh;
+#logo{
+    width: 30vh;
 
 } 
 
 #avatar{
-    width: 10vh;
+    width: 15vh;
 }
 /* Footer */
 
@@ -104,4 +143,20 @@ footer{
     color: white;
     font-size: 3vh;
     padding: 2vh;
+}
+
+::-webkit-scrollbar {
+    width: 12px; 
+}
+
+::-webkit-scrollbar-track {
+    background: #acbadb; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #6b7897; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #32487a; 
 }
