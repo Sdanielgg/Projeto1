@@ -24,7 +24,7 @@ let textos2 = [
 
 
 let indice = 0;
-
+ 
 retangulo.addEventListener("click", function() {
     if (indice < textos.length) {
         texto.textContent = textos[indice];

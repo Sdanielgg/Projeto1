@@ -25,3 +25,6 @@ document.addEventListener("DOMContentLoaded", function() {
 })}
 
 );
+
+
+const fillInBlanksDone = localStorage.getItem('fillInBlanksDone') === 'false';

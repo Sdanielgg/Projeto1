@@ -4,7 +4,7 @@ body {
     margin: 0;
     overflow: hidden;
 }
-.container {
+.container2 {
     position: relative;
     width: 100vw;
     height: 100vh;
@@ -32,4 +32,25 @@ body {
 #img4{
     width: 150px;
     height: auto;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+}
+
+#container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.point {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background-color: #E30613;
+    border-radius: 50%;
 }
