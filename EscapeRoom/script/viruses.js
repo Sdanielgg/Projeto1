@@ -290,9 +290,8 @@ function Points4(){
 }
 
 
-        
 function getRandomDirection() {
-    const speed = 2;
+    const speed = 1.5;
     const angle = Math.random() * 2 * Math.PI; 
     return {
         dx: Math.cos(angle) * speed,
@@ -301,13 +300,16 @@ function getRandomDirection() {
 }
 
 const images = [
-    {element: document.getElementById('img1'), x: 50, y: 50, ...getRandomDirection(), url: 'room1.html'},
-    {element: document.getElementById('img2'), x: 200, y: 200, ...getRandomDirection(), url: 'room2.html'},
-    {element: document.getElementById('img3'), x: 350, y: 50, ...getRandomDirection(), url: 'room1.html'},
-    {element: document.getElementById('img4'), x: 500, y: 200, ...getRandomDirection(), url: 'room1.html'},
+    {element: document.getElementById('img1'), x: 800, y: 50, ...getRandomDirection(), url: 'room1.html'},
+    {element: document.getElementById('img2'), x: 400, y: 500, ...getRandomDirection(), url: 'room2.html'},
+    {element: document.getElementById('img3'), x: 1100, y: 150, ...getRandomDirection(), url: 'room1.html'},
+    {element: document.getElementById('img4'), x: 100, y: 200, ...getRandomDirection(), url: 'room1.html'},
 ];
 
 images.forEach(img => {
+    img.element.style.position = 'absolute';
+    img.element.style.left = img.x + 'px';
+    img.element.style.top = img.y + 'px';
     img.element.addEventListener('click', () => {
         window.location.href = img.url;
     });
@@ -315,15 +317,18 @@ images.forEach(img => {
 
 function updatePosition() {
     images.forEach(img => {
-        img.x += img.dx;
-        img.y += img.dy;
+        const nextX = img.x + img.dx;
+        const nextY = img.y + img.dy;
 
-        if (img.x <= 0 || img.x + img.element.width >= window.innerWidth) {
+        if (nextX <= 0 || nextX + img.element.width >= window.innerWidth) {
             img.dx *= -1;
         }
-        if (img.y <= 0 || img.y + img.element.height >= window.innerHeight) {
+        if (nextY <= 0 || nextY + img.element.height >= window.innerHeight) {
             img.dy *= -1;
         }
+
+        img.x += img.dx;
+        img.y += img.dy;
 
         images.forEach(otherImg => {
             if (img !== otherImg) {
@@ -335,6 +340,9 @@ function updatePosition() {
                     img.dy *= -1;
                     otherImg.dx *= -1;
                     otherImg.dy *= -1;
+
+                    img.x += img.dx;
+                    img.y += img.dy;
                 }
             }
         });
@@ -348,6 +356,8 @@ function animate() {
     updatePosition();
     requestAnimationFrame(animate);
 }
+
+animate();
 
 Points1();
 Points2();
