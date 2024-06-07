@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 let textos = [
     "Estou a escrever uma parte do codigo de uma página que faz uma bola mover pelo ecra e colidir com as paredes.",
-    "Mas não sei se estou a fazer certo... destas opções qual te parece mais acertada para fazer uma bola se mover pelo ecra e colidir com as bordas?",
+    "Qual destas opções te parece mais acertada para fazer uma bola se mover pelo ecra e colidir com as bordas?",
 ];
 
 
@@ -24,12 +24,14 @@ retangulo.addEventListener("click", function() {
 });
 })
 
-
 function moveAndShow() {
     var container = document.getElementById("center-rectangle");
-    container.style.top = "10%";
+    var hoot = document.getElementById("hoot");
+    container.style.top = "3%";
     container.style.transform = "translate(-50%, 0)";
-    container.style.height = "150px";
+    hoot.style.top = "10%";
+    hoot.style.transform = "translate(-70%, -15%)";
+    container.style.height = "100px";
 
     var buttons = document.getElementsByClassName("button");
     for (var i = 0; i < buttons.length; i++) {
@@ -38,5 +40,12 @@ function moveAndShow() {
 }
 
 function handleClick(buttonId) {
-    alert("Você clicou no botão " + buttonId);
-}
+    if(buttonId == 1)
+        {
+            const room2Done = true;  
+            localStorage.setItem("room2Done", room2Done);
+            setTimeout(function() {
+                window.location.href = 'viruses.html';
+            }, 1000);
+        }
+} 

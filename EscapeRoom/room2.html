@@ -13,12 +13,94 @@
         <div id="texto">O vírus apagou várias partes do meu código. Agora terei que o reescrever, mas preciso de ajuda!</div>
 </div>  
 
-<div class="button" id="botao1" onclick="handleClick(1)">Botão 1</div>
-<div class="button" id="botao2" onclick="handleClick(2)">Botão 2</div>
-<div class="button" id="botao3" onclick="handleClick(3)">Botão 3</div>
+<div class="button" id="botao1" onclick="handleClick(1)"><pre>const ball = document.querySelector('.ball');
+    const screen = {
+      width: window.innerWidth,
+      height: window.innerHeight
+    };
+  
+    let x = screen.width / 2;
+    let y = screen.height / 2;
+    let dx = 2;
+    let dy = 2;
+  
+    function moveBall() {
+      x += dx;
+      y += dy;
+  
+      if (x <= 0 || x >= screen.width) {
+        dx = -dx;
+      }
+      if (y <= 0 || y >= screen.height) {
+        dy = -dy;
+      }
+  
+      ball.style.left = x + 'px';
+      ball.style.top = y + 'px';
+    }
+  
+    setInterval(moveBall, 10);</pre></div>
 
 
+<div class="button" id="botao2" onclick="handleClick(2)"><pre>const ball = document.querySelector('.ball');
+    const screen = {
+      width: window.innerWidth,
+      height: window.innerHeight
+    };
+  
+    let x = screen.width / 2;
+    let y = screen.height / 2;
+    let dx = 2;
+    let dy = 2;
+  
+    function moveBall() {
+      x += dx;
+      y += dy;
+  
+      if (x == 0 || x == screen.width) {
+        dx = -dx;
+      }
+      if (y <= 0 || y >= screen.height) {
+        dy = -dy;
+      }
+  
+      ball.style.left = x + 'px';
+      ball.style.right = y + 'px';
+    } 
+
+
+</pre></div>
+
+
+<div class="button" id="botao3" onclick="handleClick(3)"><pre>const ball = document.querySelector('.ball');
+    const screen = document.getElementById("screen");
+  
+    let x = screen.width;
+    let y = screen.height;
+    let dx = 2;
+    let dy = 2;
+  
+    function moveBall() {
+      x += dx;
+      y += dy;
+  
+      if (x = 0 &&   x != screen.width) {
+        dx = -dx;
+      }
+      if (y != 0 && y != screen.height) {
+        dx = -dx;
+      }
+  
+      ball.style.left = x + 'px';
+      ball.style.top = y + 'px';
+    }
+  
+    setInterval(moveBall, 10);
+
+
+
+</pre></div>
             <script src="script/room2.js"></script> 
 
 </body>
-</html>
+</html> 
