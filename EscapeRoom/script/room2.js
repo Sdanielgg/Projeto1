@@ -47,5 +47,11 @@ function handleClick(buttonId) {
             setTimeout(function() {
                 window.location.href = 'viruses.html';
             }, 1000);
+        }else if(buttonId == 2){ 
+            var botao = document.getElementById('botao2');
+            botao.style.backgroundColor ="#6d0000" 
+        }else{
+            var botao = document.getElementById('botao3');
+            botao.style.backgroundColor ="#6d0000" 
         }
 } 
