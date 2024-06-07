@@ -1,4 +1,4 @@
-body{
+body {
     background-color: #001233;
     display: flex;
     justify-content: center;
@@ -9,35 +9,67 @@ body{
     padding: 0;
 }
 
+#testimonial-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .testemunho {
-    width: 400px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90%;
+    max-width: 800px;
     background-color: #acbadb;
     border: 3px solid #6b7897;
     margin: 20px;
     padding: 20px; 
     box-sizing: border-box;
-    text-align: center;
+    text-align: left;
     transition: all 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 10px; 
 }
 
 .testemunho:hover {
-    width: 450px; 
-    padding: 30px; 
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+}
+
+.image {
+    flex-shrink: 0;
+    margin-right: 20px;
+}
+
+.image img {
+    width: 100px; 
+    height: 100px;
+    border-radius: 10px; 
+    object-fit: cover;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .nome {
     font-weight: bold;
-    font-size: 1.2em; 
-    margin-bottom: 10px; 
+    font-size: 1.5em; 
+    margin-bottom: 5px; 
+}
+
+.titulo {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    color: #364872;
 }
 
 .data {
-    margin-top: 10px;
     font-size: 1em;
     color: #364872;
+    margin-bottom: 10px;
 }
 
 .conteudo {
@@ -50,21 +82,11 @@ body{
     margin-top: 20px; 
 }
 
-.testemunho .image {
-    margin-bottom: 10px;
-}
-
-.testemunho img {
-    max-width: 50%; 
-    height: auto;
-    border-radius: 10px; 
-    object-fit: cover;
-}
-
 .clear {
     clear: both;
 }
-nav{
+
+nav {
     width: 100%;
     padding: 2vh;
     display: flex;
@@ -72,18 +94,19 @@ nav{
     justify-content: space-between;
 }
 
-#logo{
+#logo {
     width: 30vh;
 } 
 
-#avatar{
+#avatar {
     width: 15vh;
 }
 
-.content{
+.content {
     background-color: #7D8597;
     width: 70%;
 }
+
 .subNav {
     display: flex;
     flex-direction: row;
@@ -120,7 +143,7 @@ nav{
     margin-top: 2vh; 
 }
 
-button{
+button {
     height: 5vh;
     width: 100%;
     border: 0;
@@ -128,11 +151,12 @@ button{
     background-color: #7D8597;
     margin: 3px;
 }
-button:hover{
+
+button:hover {
     height: 5vh;
     width: 100%;
     border: 0;
-    background-color:grey;
+    background-color: grey;
 }
 
 ::-webkit-scrollbar {

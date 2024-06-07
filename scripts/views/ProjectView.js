@@ -3,13 +3,13 @@ function getProjects() {
     return storedProjects ? JSON.parse(storedProjects) : [];
 }
 
-function renderprojectList() {
-    const project = getProjects();
+function renderProjectList() {
+    const projects = getProjects();
     const projectContainer = document.getElementById('project-list');
 
     projectContainer.innerHTML = '';
 
-    project.forEach(project => {
+    projects.forEach(project => {
         const projectDiv = document.createElement('div');
         projectDiv.classList.add('projeto');
 
@@ -23,6 +23,9 @@ function renderprojectList() {
             projectDiv.appendChild(imageDiv);
         }
 
+        const detailsDiv = document.createElement('div');
+        detailsDiv.classList.add('details');
+
         const nameDiv = document.createElement('div');
         nameDiv.classList.add('nome');
         nameDiv.textContent = project.name;
@@ -31,11 +34,12 @@ function renderprojectList() {
         contentDiv.classList.add('conteudo');
         contentDiv.textContent = project.messageBody;
 
-        projectDiv.appendChild(nameDiv);
-        projectDiv.appendChild(contentDiv);
+        detailsDiv.appendChild(nameDiv);
+        detailsDiv.appendChild(contentDiv);
 
+        projectDiv.appendChild(detailsDiv);
         projectContainer.appendChild(projectDiv);
     });
 }
 
-window.addEventListener('load', renderprojectList);
+window.addEventListener('load', renderProjectList);

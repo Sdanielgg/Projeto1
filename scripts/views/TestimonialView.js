@@ -23,6 +23,9 @@ function renderTestimonialList() {
             testimonialDiv.appendChild(imageDiv);
         }
 
+        const detailsDiv = document.createElement('div');
+        detailsDiv.classList.add('details');
+
         const nameDiv = document.createElement('div');
         nameDiv.classList.add('nome');
         nameDiv.textContent = testimonial.name;
@@ -39,11 +42,12 @@ function renderTestimonialList() {
         contentDiv.classList.add('conteudo');
         contentDiv.textContent = testimonial.messageBody;
 
-        testimonialDiv.appendChild(nameDiv);
-        testimonialDiv.appendChild(titleDiv);
-        testimonialDiv.appendChild(dateDiv);
-        testimonialDiv.appendChild(contentDiv);
+        detailsDiv.appendChild(nameDiv);
+        detailsDiv.appendChild(titleDiv);
+        detailsDiv.appendChild(dateDiv);
+        detailsDiv.appendChild(contentDiv);
 
+        testimonialDiv.appendChild(detailsDiv);
         testimonialContainer.appendChild(testimonialDiv);
     });
 }

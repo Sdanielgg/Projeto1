@@ -4,12 +4,12 @@ function getEvents() {
 }
 
 function renderEventList() {
-    const event = getEvents();
+    const events = getEvents();
     const eventContainer = document.getElementById('event-list');
 
     eventContainer.innerHTML = '';
 
-    event.forEach(event => {
+    events.forEach(event => {
         const eventDiv = document.createElement('div');
         eventDiv.classList.add('evento');
 
@@ -23,6 +23,9 @@ function renderEventList() {
             eventDiv.appendChild(imageDiv);
         }
 
+        const detailsDiv = document.createElement('div');
+        detailsDiv.classList.add('details');
+
         const nameDiv = document.createElement('div');
         nameDiv.classList.add('nome');
         nameDiv.textContent = event.name;
@@ -31,9 +34,10 @@ function renderEventList() {
         contentDiv.classList.add('conteudo');
         contentDiv.textContent = event.messageBody;
 
-        eventDiv.appendChild(nameDiv);
-        eventDiv.appendChild(contentDiv);
+        detailsDiv.appendChild(nameDiv);
+        detailsDiv.appendChild(contentDiv);
 
+        eventDiv.appendChild(detailsDiv);
         eventContainer.appendChild(eventDiv);
     });
 }

@@ -78,6 +78,19 @@ function changeCredentials() {
         handleChange(500)
         
     }
+
+    function logoutUser() {
+        let users = JSON.parse(localStorage.getItem("users")) || [];
+        const userIndex = users.findIndex(u => u.status === "active");
+
+        if (userIndex !== -1) {
+            users[userIndex].status = "inactive";
+            localStorage.setItem("users", JSON.stringify(users));
+            window.location.href = "index.html";
+        }
+    }
+
+    document.getElementById("logoutButton").addEventListener("click", logoutUser);
     
     
     

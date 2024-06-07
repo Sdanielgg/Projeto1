@@ -35,7 +35,8 @@ button {
     width: 20vh;
     border: 0;
     border-radius: 10px;
-    font-size: 14px; /* Adjusted font size for button text */
+    font-size: 14px;
+    color: white;
 }
 
 button:hover {
@@ -43,6 +44,7 @@ button:hover {
     width: 20vh;
     border: 0;
     background-color: grey;
+    color: white;
 }
 
 #Username {
@@ -84,4 +86,14 @@ input {
 .smallAvatar {
     margin: 10px;
     width: 15vh;
+}
+
+.logout-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+#logoutButton {
+    width: 100px;
 }
