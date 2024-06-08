@@ -11,6 +11,7 @@ body {
 h1, h2 {
     font-family: 'Source Code Pro', monospace;
 }
+
 #backButton {
     background-color: #8faecf;
     color: rgb(0, 0, 0);
@@ -19,20 +20,29 @@ h1, h2 {
     cursor: pointer;
     border-radius: 5px;
     margin-bottom: 20px; 
-  }
-  
-  #backButton:hover {
+}
+
+#backButton:hover {
     background-color: #6d859f;
-  }
-  
-  #backButton i {
+}
+
+#backButton i {
     margin-right: 5px;
-  }
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    padding: 0 15px;
+    margin-top: 20px;
+}
 
 form {
     background-color: #526c85;
     color: white;
     border-radius: 10px;
+    max-width: 100%;
+    padding: 20px; 
 }
 
 form .form-control {
@@ -48,6 +58,7 @@ form .btn-primary {
     background-color: #8faecf;
     color: black;
     border: none;
+    margin-top: 10px; 
 }
 
 form .btn-primary:hover {
@@ -58,6 +69,7 @@ form .btn-primary:hover {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: center; 
 }
 
 .project-card {
@@ -70,14 +82,14 @@ form .btn-primary:hover {
     flex: 1 1 calc(33.333% - 20px);
     display: flex;
     flex-direction: column;
+    max-width: 300px; 
 }
-.project-image {
-    width: 50%;
+
+.card-image {
+    width: 100%;
     height: auto;
     object-fit: cover;
     border-radius: 10px 10px 0 0;
-    margin: auto;
-    display: block;
 }
 
 .card-body {
@@ -101,14 +113,14 @@ form .btn-primary:hover {
     margin-bottom: 1rem;
 }
 
-.btn-danger {
+.btn-danger, .btn-primary {
     align-self: flex-end;
-    margin-top: 10px;
+    margin-top: auto;
     background-color: #d9534f;
     border: none;
 }
 
-.btn-danger:hover {
+.btn-danger:hover, .btn-primary:hover {
     background-color: #c9302c;
 }
 
@@ -121,4 +133,3 @@ form .btn-primary:hover {
     flex: 1;
     margin: 5px;
 }
-

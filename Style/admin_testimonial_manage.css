@@ -8,9 +8,17 @@ body {
     color: white;
 }
 
+.container {
+    max-width: 600px;
+    width: 100%;
+    padding: 0 15px;
+    margin-top: 20px;
+}
+
 h1, h2 {
     font-family: 'Source Code Pro', monospace;
 }
+
 #backButton {
     background-color: #8faecf;
     color: rgb(0, 0, 0);
@@ -19,20 +27,21 @@ h1, h2 {
     cursor: pointer;
     border-radius: 5px;
     margin-bottom: 20px; 
-  }
+}
   
-  #backButton:hover {
+#backButton:hover {
     background-color: #6d859f;
-  }
+}
   
-  #backButton i {
+#backButton i {
     margin-right: 5px;
-  }
+}
 
 form {
     background-color: #526c85;
     color: white;
     border-radius: 10px;
+    max-width: 100%;
 }
 
 form .form-control {
@@ -80,7 +89,6 @@ form .btn-primary:hover {
     margin: 0; 
     padding: 0; 
 }
-
 
 .card-body {
     padding: 20px;
