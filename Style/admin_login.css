@@ -1,67 +1,71 @@
-.hidden {
-    display: none;
-}
-
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-family: "Viga";
     margin: 0;
-    background-color: #737475;
-    color: white;
+    background-color: #f0f0f0; /* light gray background */
+    color: #333; /* dark gray text */
     min-height: 100vh;
-}
-
-.container {
+  }
+  
+  .container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
-}
-
-.card {
-    background-color: #526c85;
-    color: white;
-    width: 400px; 
+  }
+  
+  .card {
+    background-color: #fff; /* white background */
+    color: #333; /* dark gray text */
+    width: 400px;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
-}
-
-.card-title {
+  }
+  
+  .card-title {
     font-size: 24px;
     margin-bottom: 20px;
     text-align: center;
-}
-
-.form-control {
-    background-color: #526c85;
-    border: none;
-    border-bottom: 2px solid #a0d5e4;
-    border-radius: 0;
-    color: white;
+    color: #337ab7; /* blue-ish text */
+  }
+  
+  .form-control {
+    background-color: #fff;
+    border: 1px solid #ddd; /* light gray border */
+    border-radius: 5px;
+    color: #333;
     margin-bottom: 20px;
     padding: 10px;
     transition: border-color 0.3s;
-}
-
-.form-control:focus {
-    border: none;
-    background-color: #526c85;
-
-}
-
-.btn-primary {
-    background-color: #4a4a4a;
+  }
+  
+  .form-control:focus {
+    border-color: #337ab7; /* blue-ish border on focus */
+    box-shadow: 0 0 10px rgba(51, 122, 183, 0.5);
+  }
+  
+  .btn-primary {
+    background-color: #337ab7; /* blue-ish background */
     border: none;
     border-radius: 5px;
-    color: white;
+    color: #fff;
     font-size: 18px;
     padding: 10px 20px;
     transition: background-color 0.3s;
-}
-
-.btn-primary:hover {
-    background-color: #252525;
-}
+  }
+  
+  .btn-primary:hover {
+    background-color: #23527c; /* darker blue-ish background on hover */
+  }
+  
+  #alertContainer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 20px;
+    z-index: 11;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  }

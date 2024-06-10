@@ -4,8 +4,8 @@ body {
     align-items: center;
     font-family: "Viga";
     margin: 0;
-    background-color: #737475;
-    color: white;
+    background-color: #f0f0f0; /* light gray background */
+    color: #333; /* dark gray text */
     min-height: 100vh;
 }
 
@@ -23,42 +23,42 @@ body {
 
 /* Card Styles */
 .card {
-    background-color: #526c85;
+    background-color: #337ab7; /* blue-ish background */
     border: none;
-    color: white;
+    color: #fff; /* white text */
     transition: transform 0.3s, background-color 0.3s;
 }
 
 .card:hover {
-    background-color: #6693be;
+    background-color: #23527c; /* darker blue-ish background */
     transform: scale(1.05);
     color: #000;
 }
 
 .card i {
-    color: #a0d5e4;
+    color: #a0d5e4; /* light blue-ish icon color */
     transition: color 0.3s;
 }
 
 .card:hover i {
-    color: #ffffff;
+    color: #ffffff; /* white icon color on hover */
 }
 
 /* Logout Card Styles */
 .logout-card {
-    background-color: #c82333;
+    background-color: #dc3545; /* red-ish background */
 }
 
 .logout-card:hover {
-    background-color: #dc3545;
+    background-color: #c82333; /* darker red-ish background */
 }
 
 .logout-card i {
-    color: #f8d7da;
+    color: #f8d7da; /* light red-ish icon color */
 }
 
 .logout-card:hover i {
-    color: #ffffff;
+    color: #ffffff; /* white icon color on hover */
 }
 
 .card-title {
@@ -75,8 +75,8 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #526c85;
-    color: white;
+    background-color: #337ab7; /* blue-ish background */
+    color: #fff; /* white text */
     position: absolute;
     bottom: 20px;
     right: 20px;
@@ -89,6 +89,6 @@ h1 {
 }
 
 #logoutButton:hover {
-    background-color: #6693be;
+    background-color: #23527c; /* darker blue-ish background */
     color: #000;
 }
