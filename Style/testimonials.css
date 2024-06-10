@@ -73,12 +73,8 @@ body {
 }
 
 .conteudo {
-    display: none;
-    transition: all 0.3s ease;
-}
-
-.testemunho:hover .conteudo {
     display: block;
+    transition: all 0.3s ease;
     margin-top: 20px; 
 }
 

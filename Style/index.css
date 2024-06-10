@@ -1,48 +1,69 @@
 * {
   font-family: "Viga";
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    height: 100vh;
-    background-color: #acbadb;
-    color: #000000; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #acbadb;
+  color: #333; 
+}
+
+.container-fluid {
+  padding: 20px;
+}
+
+img {
+  max-width: 100px; 
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.entry-button,
+.admin-button {
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  margin: 0 10px;
+  transition: background-color 0.3s ease; 
 }
 
 .entry-button {
   background-color: #0d4156; 
   color: #ffffff; 
-  border-radius: 10px; 
-  font-size: 18px; 
-  padding: 10px 20px; 
-  border: none; 
 }
 
 .entry-button:hover {
   background-color: #1781aa; 
-  color: #ffffff; 
 }
 
 .admin-button {
   background-color: #323232; 
   color: #ffffff; 
-  border-radius: 10px; 
-  font-size: 18px; 
-  padding: 10px 20px; 
-  border: none; 
 }
 
 .admin-button:hover {
   background-color: #737475; 
-  color: #ffffff; 
-}
-
-.entry-button,
-.admin-button {
-  font-size: 18px; 
-  padding: 10px 20px; 
-  border: none; 
 }
