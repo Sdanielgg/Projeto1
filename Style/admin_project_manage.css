@@ -4,30 +4,8 @@ body {
     align-items: center;
     font-family: "Viga";
     margin: 0;
-    background-color: #737475;
-    color: white;
-}
-
-h1, h2 {
-    font-family: 'Source Code Pro', monospace;
-}
-
-#backButton {
-    background-color: #8faecf;
-    color: rgb(0, 0, 0);
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-bottom: 20px; 
-}
-
-#backButton:hover {
-    background-color: #6d859f;
-}
-
-#backButton i {
-    margin-right: 5px;
+    background-color: #f0f0f0;
+    color: 333;
 }
 
 .container {
@@ -37,9 +15,31 @@ h1, h2 {
     margin-top: 20px;
 }
 
+h1, h2 {
+    font-family: 'Source Code Pro', monospace;
+}
+
+#backButton {
+    background-color: #337ab7;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 20px; 
+}
+
+#backButton:hover {
+    background-color: #23527c;
+}
+
+#backButton i {
+    margin-right: 5px;
+}
+
 form {
-    background-color: #526c85;
-    color: white;
+    background-color: #337ab7;
+    color: #fff;
     border-radius: 10px;
     max-width: 100%;
     padding: 20px; 
@@ -55,14 +55,14 @@ form .form-control:focus {
 }
 
 form .btn-primary {
-    background-color: #8faecf;
-    color: black;
+    background-color: #337ab7;
+    color: white;
     border: none;
     margin-top: 10px; 
 }
 
 form .btn-primary:hover {
-    background-color: #6d859f;
+    background-color: #23527c;
 }
 
 #projectList {
@@ -73,12 +73,12 @@ form .btn-primary:hover {
 }
 
 .project-card {
-    background-color: #526c85;
+    background-color: #337ab7;
     border: none;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    color: white;
+    color: #fff;
     flex: 1 1 calc(33.333% - 20px);
     display: flex;
     flex-direction: column;

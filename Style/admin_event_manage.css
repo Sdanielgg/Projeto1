@@ -4,8 +4,8 @@ body {
     align-items: center;
     font-family: "Viga";
     margin: 0;
-    background-color: #737475;
-    color: white;
+    background-color: #f0f0f0;
+    color: #333;
 }
 
 h1, h2 {
@@ -13,8 +13,8 @@ h1, h2 {
 }
 
 #backButton {
-    background-color: #8faecf;
-    color: rgb(0, 0, 0);
+    background-color: #337ab7;
+    color: #fff;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
@@ -23,7 +23,7 @@ h1, h2 {
 }
 
 #backButton:hover {
-    background-color: #6d859f;
+    background-color: #23527c;
 }
 
 #backButton i {
@@ -38,8 +38,8 @@ h1, h2 {
 }
 
 form {
-    background-color: #526c85;
-    color: white;
+    background-color: #337ab7;
+    color: #fff;
     border-radius: 10px;
     max-width: 100%;
     padding: 20px; 
@@ -55,14 +55,14 @@ form .form-control:focus {
 }
 
 form .btn-primary {
-    background-color: #8faecf;
-    color: black;
+    background-color: #337ab7;
+    color: white;
     border: none;
     margin-top: 10px; 
 }
 
 form .btn-primary:hover {
-    background-color: #6d859f;
+    background-color: #23527c;
 }
 
 #eventList {
@@ -73,7 +73,7 @@ form .btn-primary:hover {
 }
 
 .event-card {
-    background-color: #526c85;
+    background-color: #337ab7;
     border: none;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

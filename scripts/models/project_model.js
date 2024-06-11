@@ -1,10 +1,10 @@
-class Project {
+export class Project {
     constructor(name, messageBody, image) {
-        this.image = image 
+        this.image = image;
         this.name = name;
         this.messageBody = messageBody;
     }
-  
+
     getFormattedProject() {
         return `
             Image URL: ${this.image}
@@ -12,9 +12,8 @@ class Project {
             Message: ${this.messageBody}
         `;
     }
-  
+
     updateMessageBody(newMessageBody) {
         this.messageBody = newMessageBody;
     }
-  }
-  
+}

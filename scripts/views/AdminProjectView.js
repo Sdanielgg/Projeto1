@@ -1,4 +1,4 @@
-
+import { Project } from "../models/project_model.js";
 const projectForm = document.getElementById('projectForm');
 const projectList = document.getElementById('projectList');
 const projects = JSON.parse(localStorage.getItem('projects')) || [];
@@ -42,14 +42,14 @@ function displayProjects() {
         editButton.textContent = 'Editar';
         editButton.classList.add('btn', 'btn-warning');
         editButton.addEventListener('click', () => {
-            loadprojectForEdit(index);
+            loadProjectForEdit(index);
         });
 
         const deleteButton = document.createElement('button');
         deleteButton.textContent = 'Eliminar';
         deleteButton.classList.add('btn', 'btn-danger');
         deleteButton.addEventListener('click', () => {
-            deleteproject(index);
+            deleteProject(index);
         });
 
         // Add buttons to the container
@@ -65,13 +65,13 @@ function displayProjects() {
     });
 }
 
-function deleteproject(index) {
+function deleteProject(index) {
     projects.splice(index, 1);
     saveProjects();
     displayProjects();
 }
 
-function loadprojectForEdit(index) {
+function loadProjectForEdit(index) {
     const project = projects[index];
     document.getElementById('projectName').value = project.name;
     document.getElementById('projectMessage').value = project.messageBody;
@@ -91,30 +91,30 @@ projectForm.addEventListener('submit', (e) => {
         reader.onload = (e) => {
             const image = e.target.result;
             if (editIndex === -1) {
-                addproject(name,  messageBody, image);
+                addProject(name,  messageBody, image);
             } else {
-                updateproject(editIndex, name, messageBody, image);
+                updateProject(editIndex, name, messageBody, image);
             }
         };
         reader.readAsDataURL(imageFile);
     } else {
         if (editIndex === -1) {
-            addproject(name, messageBody, '');
+            addProject(name, messageBody, '');
         } else {
-            updateproject(editIndex, name, messageBody);
+            updateProject(editIndex, name, messageBody);
         }
     }
 });
 
-function addproject(name, messageBody, image) {
-    const newproject = new project(name, messageBody, image);
-    projects.push(newproject);
+function addProject(name, messageBody, image) {
+    const newProject = new Project(name, messageBody, image);
+    projects.push(newProject);
     saveProjects();
     projectForm.reset();
     displayProjects();
 }
 
-function updateproject(index, name, messageBody, image) {
+function updateProject(index, name, messageBody, image) {
     projects[index].name = name;
     projects[index].messageBody = messageBody;
     if (image) {
@@ -125,5 +125,3 @@ function updateproject(index, name, messageBody, image) {
     editIndex = -1;
     displayProjects();
 }
-
-displayProjects();

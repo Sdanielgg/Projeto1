@@ -1,8 +1,8 @@
 body {
   font-family: "Viga";
   margin: 0;
-  background-color: #737475;
-  color: white;
+  background-color: #f0f0f0; /* light gray background */
+  color: #333; /* dark gray text */
 }
 
 h1 {
@@ -10,8 +10,8 @@ h1 {
 }
 
 #backButton {
-  background-color: #8faecf;
-  color: rgb(0, 0, 0);
+  background-color: #337ab7; /* blue-ish background */
+  color: #fff; /* white text */
   border: none;
   padding: 10px 20px;
   cursor: pointer;
@@ -20,7 +20,7 @@ h1 {
 }
 
 #backButton:hover {
-  background-color: #6d859f;
+  background-color: #23527c; /* darker blue-ish background */
 }
 
 #backButton i {
@@ -28,19 +28,18 @@ h1 {
 }
 
 .card {
-  background-color: #526c85;
+  background-color: #337ab7; /* blue-ish background */
   border: none;
   border-radius: 10px;
-  color: white;
+  color: #fff; /* white text */
   padding: 20px;
   transition: transform 0.3s, background-color 0.3s;
 }
 
 .card:hover {
-  background-color: #6693be;
+  background-color: #23527c; /* darker blue-ish background */
   color: #000;
 }
-
 
 .card-title {
   font-size: 1.5rem;
@@ -62,6 +61,15 @@ h1 {
 
 .btn {
   padding: 5px 20px;
+  background-color: #23527c; /* blue-ish background */
+  color: #fff; /* white text */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #337ab7; /* darker blue-ish background */
 }
 
 .badge {
@@ -75,4 +83,9 @@ h1 {
   white-space: nowrap;
   vertical-align: baseline;
   border-radius: 0.375rem;
+  background-color: #337ab7; /* blue-ish background */
+}
+
+.badge:hover {
+  background-color: #23527c; /* darker blue-ish background */
 }
