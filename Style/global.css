@@ -87,9 +87,30 @@ button:hover{
     width: 30vh;
 
 } 
-
+.avatar-container{
+    display: flex;
+    align-items: center;
+}
 #avatar{
-    width: 15vh;
+    height: 15vh;
+}
+#escapeButton {
+    width: 20vh;
+    align-self: center;
+    padding: 5px 10px; 
+    background-color: #323679;
+    color: white;
+    border: none;
+    border-radius: 3px; 
+    font-size: 14px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Viga', sans-serif;
+    margin: 10px;
+}
+
+#escapeButton:hover {
+    background-color: #161a5e;
 }
 /* Footer */
 

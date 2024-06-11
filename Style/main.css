@@ -1,25 +1,3 @@
-#escapeButton {
-    position: absolute;
-    top: 5%;
-    right: 10%;
-    align-self: center;
-    padding: 5px 10px; 
-    background-color: #323679;
-    color: white;
-    border: none;
-    border-radius: 3px; 
-    font-size: 14px; 
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-family: 'Viga', sans-serif;
-    max-width: 200px;
-    max-height: 100px;
-}
-
-#escapeButton:hover {
-    background-color: #161a5e;
-}
-
 .introducao-1, .introducao-2, .introducao-3 {
     font-size: larger;
     width: 90vh;

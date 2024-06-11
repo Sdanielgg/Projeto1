@@ -1,8 +1,8 @@
 body {
     font-family: "Viga";
     margin: 0;
-    background-color: #f0f0f0; /* light gray background */
-    color: #333; /* dark gray text */
+    background-color: #f0f0f0;
+    color: #333;
     min-height: 100vh;
   }
   
@@ -14,8 +14,8 @@ body {
   }
   
   .card {
-    background-color: #fff; /* white background */
-    color: #333; /* dark gray text */
+    background-color: #fff;
+    color: #333;
     width: 400px;
     padding: 20px;
     border-radius: 10px;
@@ -26,12 +26,12 @@ body {
     font-size: 24px;
     margin-bottom: 20px;
     text-align: center;
-    color: #337ab7; /* blue-ish text */
+    color: #337ab7;
   }
   
   .form-control {
     background-color: #fff;
-    border: 1px solid #ddd; /* light gray border */
+    border: 1px solid #ddd;
     border-radius: 5px;
     color: #333;
     margin-bottom: 20px;
@@ -40,12 +40,12 @@ body {
   }
   
   .form-control:focus {
-    border-color: #337ab7; /* blue-ish border on focus */
+    border-color: #337ab7;
     box-shadow: 0 0 10px rgba(51, 122, 183, 0.5);
   }
   
   .btn-primary {
-    background-color: #337ab7; /* blue-ish background */
+    background-color: #337ab7; 
     border: none;
     border-radius: 5px;
     color: #fff;
@@ -55,7 +55,7 @@ body {
   }
   
   .btn-primary:hover {
-    background-color: #23527c; /* darker blue-ish background on hover */
+    background-color: #23527c; 
   }
   
   #alertContainer {

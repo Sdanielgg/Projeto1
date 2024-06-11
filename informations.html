@@ -12,7 +12,14 @@
 <body>
     <nav>
         <a href="main.html"><img id="logo" src="./images/logo.svg"></a>
-        <a href="profile.html"><img id="avatar"></a>
+        <div class="avatar-container"style="display:flex;">    
+            <a href="./EscapeRoom/intro.html">
+                <button id="escapeButton">Escape Room</button>
+            </a>
+            <a href="profile.html">
+                <img id="avatar">
+            </a>
+        </div>
     </nav>
 
     <div class="subNav-Container">
@@ -67,7 +74,7 @@
                 <div id="primeiroAnoUcs" style="display: flex; flex-direction: row; justify-content: space-evenly; text-align: start;">
                     <div>
                         <div class="nome">1º Ano</div>
-                        <ul>
+                        <ul class="ucList">
                             <li>Algoritmia e Estruturas de Dados - 7 ECTS</li>
                             <li>Fundamentos de Design - 6 ECTS</li>
                             <li>Matemática I - 5 ECTS</li>
@@ -82,7 +89,7 @@
                     </div>
                     <div>
                         <div class="nome">2º Ano</div>
-                        <ul>
+                        <ul class="ucList">
                             <li>Bases de Dados</li>
                             <li>Computação Gráfica</li>
                             <li>Engenharia de Software</li>
@@ -97,7 +104,7 @@
                 </div>
                 <div>
                     <div class="nome">3º Ano</div>
-                    <ul>
+                    <ul class="ucList">
                         <li>Computação Móvel e Ubíqua</li>
                         <li>Inovação e Empreendedorismo</li>
                         <li>Negócio Eletrónico e Segurança</li>
