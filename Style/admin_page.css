@@ -4,8 +4,8 @@ body {
     align-items: center;
     font-family: "Viga";
     margin: 0;
-    background-color: #f0f0f0; /* light gray background */
-    color: #333; /* dark gray text */
+    background-color: #f0f0f0;
+    color: #333; 
     min-height: 100vh;
 }
 
@@ -23,42 +23,42 @@ body {
 
 /* Card Styles */
 .card {
-    background-color: #337ab7; /* blue-ish background */
+    background-color: #337ab7; 
     border: none;
-    color: #fff; /* white text */
+    color: #fff;
     transition: transform 0.3s, background-color 0.3s;
 }
 
 .card:hover {
-    background-color: #23527c; /* darker blue-ish background */
+    background-color: #23527c; 
     transform: scale(1.05);
     color: #000;
 }
 
 .card i {
-    color: #a0d5e4; /* light blue-ish icon color */
+    color: #a0d5e4; 
     transition: color 0.3s;
 }
 
 .card:hover i {
-    color: #ffffff; /* white icon color on hover */
+    color: #ffffff; 
 }
 
 /* Logout Card Styles */
 .logout-card {
-    background-color: #dc3545; /* red-ish background */
+    background-color: #dc3545; 
 }
 
 .logout-card:hover {
-    background-color: #c82333; /* darker red-ish background */
+    background-color: #c82333; 
 }
 
 .logout-card i {
-    color: #f8d7da; /* light red-ish icon color */
+    color: #f8d7da; 
 }
 
 .logout-card:hover i {
-    color: #ffffff; /* white icon color on hover */
+    color: #ffffff; 
 }
 
 .card-title {
@@ -75,8 +75,8 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #337ab7; /* blue-ish background */
-    color: #fff; /* white text */
+    background-color: #337ab7; 
+    color: #fff;
     position: absolute;
     bottom: 20px;
     right: 20px;
@@ -89,6 +89,6 @@ h1 {
 }
 
 #logoutButton:hover {
-    background-color: #23527c; /* darker blue-ish background */
+    background-color: #23527c; 
     color: #000;
 }

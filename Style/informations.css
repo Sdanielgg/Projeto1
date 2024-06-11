@@ -1,14 +1,3 @@
-body {
-    background-color: #001233;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    font-family: 'Viga';
-    margin: 0;
-    padding: 0;
-}
-
 .informação-1{
     font-size: larger;
     width: 90vh;
@@ -163,4 +152,8 @@ button:hover{
 
 ::-webkit-scrollbar-thumb:hover {
     background: #32487a; 
+}
+
+.ucList{
+    list-style: none;
 }

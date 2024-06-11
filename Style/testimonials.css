@@ -1,14 +1,3 @@
-body {
-    background-color: #001233;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    font-family: 'Viga';
-    margin: 0;
-    padding: 0;
-}
-
 #testimonial-list {
     display: flex;
     flex-wrap: wrap;

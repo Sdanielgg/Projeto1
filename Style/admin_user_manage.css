@@ -1,8 +1,8 @@
 body {
   font-family: "Viga";
   margin: 0;
-  background-color: #f0f0f0; /* light gray background */
-  color: #333; /* dark gray text */
+  background-color: #f0f0f0; 
+  color: #333; 
 }
 
 h1 {
@@ -10,17 +10,17 @@ h1 {
 }
 
 #backButton {
-  background-color: #337ab7; /* blue-ish background */
-  color: #fff; /* white text */
+  background-color: #337ab7;
+  color: #fff;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 5px;
-  margin-bottom: 20px; /* Add margin bottom */
+  margin-bottom: 20px;
 }
 
 #backButton:hover {
-  background-color: #23527c; /* darker blue-ish background */
+  background-color: #23527c; 
 }
 
 #backButton i {
@@ -28,16 +28,16 @@ h1 {
 }
 
 .card {
-  background-color: #337ab7; /* blue-ish background */
+  background-color: #337ab7; 
   border: none;
   border-radius: 10px;
-  color: #fff; /* white text */
+  color: #fff; 
   padding: 20px;
   transition: transform 0.3s, background-color 0.3s;
 }
 
 .card:hover {
-  background-color: #23527c; /* darker blue-ish background */
+  background-color: #23527c;
   color: #000;
 }
 
@@ -61,15 +61,15 @@ h1 {
 
 .btn {
   padding: 5px 20px;
-  background-color: #23527c; /* blue-ish background */
-  color: #fff; /* white text */
+  background-color: #23527c;
+  color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
 .btn:hover {
-  background-color: #337ab7; /* darker blue-ish background */
+  background-color: #337ab7; 
 }
 
 .badge {
@@ -83,9 +83,9 @@ h1 {
   white-space: nowrap;
   vertical-align: baseline;
   border-radius: 0.375rem;
-  background-color: #337ab7; /* blue-ish background */
+  background-color: #337ab7;
 }
 
 .badge:hover {
-  background-color: #23527c; /* darker blue-ish background */
+  background-color: #23527c; 
 }
