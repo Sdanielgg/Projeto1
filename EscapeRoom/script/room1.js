@@ -42,6 +42,8 @@ botao2.addEventListener("click", function(){
         botao2.textContent = "<body>";
         botao3.textContent = "<head>";
         botao4.textContent = "<script>";
+    }else{
+        loseLife()
     }
 })
 
@@ -53,7 +55,13 @@ botao3.addEventListener("click", function(){
         botao3.textContent = "font-size";
         botao4.textContent = "<typography>";
         
+    }else{
+        loseLife()
     }
+})
+
+botao4.addEventListener("click", function(){
+   loseLife()
 })
 
 let contagem = 0;
@@ -90,6 +98,8 @@ botao1.addEventListener("click", function(){
         }, 1000);
 
         
+    }else{
+        loseLife()
     }
 })
 })

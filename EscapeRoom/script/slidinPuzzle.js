@@ -74,9 +74,10 @@ document.addEventListener('DOMContentLoaded', function() {
       if (isSolved) {
         puzzle.classList.add('solved');
         fadeInEmptyTile();
+        const room2Done = true;  
+        localStorage.setItem("puzzleDone", puzzleDone);
         setTimeout(() => {
-          window.close(); 
-          window.opener.document.getElementById('win-message').style.display = 'block';
+          window.open("viruses.html");
         }, 2000);
         
       } else {
@@ -85,7 +86,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function fadeInEmptyTile() {
-      const emptyTileImage = document.querySelector("style\images\hoot.png");
+      puzzleDone= true;
+      const emptyTileImage = document.querySelector(".empty img");
       emptyTileImage.style.opacity = 0; 
 
       const intervalId = setInterval(function() {
@@ -99,8 +101,88 @@ document.addEventListener('DOMContentLoaded', function() {
       }, 100);
     }
 
+
+
     initializePuzzle();
   });
+
+  function Points(){
+    const puzzleisDone = localStorage.getItem('puzzleDone') === 'true';
+    document.addEventListener("DOMContentLoaded", () => {
+        const container = document.getElementById('puzzle');
+        const points = [];
+        const numPoints = 50; // Total de pontos
+
+    
+        // Função para gerar um número aleatório entre min e max
+        function getRandom(min, max) {
+            return Math.random() * (max - min) + min;
+        }
+    
+    
+        // Cria pontos com posições e direções aleatórias
+        for (let i = 0; i < numPoints; i++) {
+            const point = document.createElement('div');
+            point.classList.add('point');
+            container.appendChild(point);
+
+    
+            points.push({
+                element: point,
+                x: getRandom(0, window.innerWidth - 20),
+                y: getRandom(0, window.innerHeight - 20),
+                dx: getRandom(-3, 3), // Garantir que dx não seja 0
+                dy: getRandom(-3, 3)   // Garantir que dy não seja 0
+            });
+        }
+    
+        function movePoints() {
+          
+            points.forEach(point => {
+                // Move o ponto
+                point.x += point.dx;
+                point.y += point.dy;
+    
+                // Verifica colisão com as bordas do contêiner
+                if (point.x <= 0 || point.x >= window.innerWidth - 20) {
+                    point.dx *= -1; // Inverte a direção no eixo x
+                }
+                if (point.y <= 0 || point.y >= window.innerHeight - 20) {
+                    point.dy *= -1; // Inverte a direção no eixo y
+                }
+    
+                // Atualiza a posição do elemento ponto
+                point.element.style.left = `${point.x}px`;
+                point.element.style.top = `${point.y}px`;
+                if(puzzleisDone == true){
+                  point.element.style.background = "#119822";
+                  
+                }else {
+                  point.element.style.background = "#E30613";
+                }
+
+            });
+    
+            requestAnimationFrame(movePoints);
+            
+        }
+    
+        movePoints();
+    });
+
+
+
+
+    }
+    
+
+
+
+   
+
+
+
+  Points();
   
 
  
