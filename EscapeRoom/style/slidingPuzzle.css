@@ -1,0 +1,53 @@
+@font-face {
+    font-family: "Viga";
+    src: url("../fonts/Viga-Regular.ttf");
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    font-family: "Viga";
+    margin: 0;
+    height: 100vh;
+  }
+  
+  
+  .puzzle {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 0;
+      grid-auto-rows: 1fr;
+      width: 320px;
+      height: 320px;
+      margin: 0 auto;
+    }
+  
+    .tile {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none; 
+      font-size: 24px;
+      cursor: pointer;
+      position: relative;
+    }
+  
+    .tile img {
+      width: auto;
+      height: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: fill; 
+    }
+  
+  
+    .tile.empty img {
+      opacity: 0;
+    }
+  #result {
+    font-size: 30px;
+    margin-left: 20px;
+  }
