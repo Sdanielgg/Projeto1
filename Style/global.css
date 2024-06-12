@@ -95,7 +95,6 @@ button:hover{
     height: 15vh;
 }
 #escapeButton,#loginRegisterButton{
-
     width: 20vh;
     align-self: center;
     padding: 5px 10px; 
@@ -110,7 +109,7 @@ button:hover{
     margin: 10px;
 }
 
-#escapeButton:hover {
+#escapeButton:hover,#loginRegisterButton:hover {
     background-color: #161a5e;
 }
 /* Footer */
