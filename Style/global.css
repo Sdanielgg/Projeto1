@@ -94,7 +94,8 @@ button:hover{
 #avatar{
     height: 15vh;
 }
-#escapeButton {
+#escapeButton,#loginRegisterButton{
+
     width: 20vh;
     align-self: center;
     padding: 5px 10px; 
