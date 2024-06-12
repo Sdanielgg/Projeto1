@@ -23,7 +23,20 @@ function loseLife() {
         setTimeout(() => {
             document.body.classList.remove('shake');
         }, 500);
+
+        if (lives === 0) {
+            setTimeout(() => {
+                window.location.href = 'GameOver.html';
+            }, 500); // Slight delay to allow shake animation to complete
+        }
     }
+}
+
+function resetVidas() {
+    lives = 3;
+    localStorage.setItem('lives', lives);
+    updateLivesDisplay();
+    resetTimer();
 }
 
 function updateLivesDisplay() {

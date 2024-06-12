@@ -55,7 +55,8 @@
         <button onclick="tryAgain()">Try Again</button>
         <button onclick="goToMenu()">Voltar para o Menu</button>
     </div>
-
+<script src="script/timer.js"></script>
+<script src="script/vidas.js"></script>
     <script>
         let countdown = 10;
         const countdownElement = document.getElementById('countdown');
@@ -71,11 +72,13 @@
         }, 1000);
 
         function tryAgain() {
-            alert('Reiniciando o jogo...');
+            window.location.href = 'intro.html';
+            
+            
         }
 
         function goToMenu() {
-            alert('Voltando ao menu...');
+            window.location.href = '../index.html';
         }
     </script>
 </body>

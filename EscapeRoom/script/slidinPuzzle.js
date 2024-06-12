@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
       if (isSolved) {
         puzzle.classList.add('solved');
         fadeInEmptyTile();
-        const room2Done = true;  
+        const puzzleDone = true;  
         localStorage.setItem("puzzleDone", puzzleDone);
         setTimeout(() => {
           window.open("viruses.html");

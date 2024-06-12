@@ -44,6 +44,7 @@ function resetTimer() {
     localStorage.setItem('elapsedTime', elapsedTime);
     document.getElementById('timer').textContent = formatTime(elapsedTime);
     startTimer();
+    resetVidas();
 }
 
 window.addEventListener('load', () => {

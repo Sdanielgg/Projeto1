@@ -50,8 +50,10 @@ function handleClick(buttonId) {
         }else if(buttonId == 2){ 
             var botao = document.getElementById('botao2');
             botao.style.backgroundColor ="#6d0000" 
+            loseLife();
         }else{
             var botao = document.getElementById('botao3');
             botao.style.backgroundColor ="#6d0000" 
+            loseLife();
         }
 } 

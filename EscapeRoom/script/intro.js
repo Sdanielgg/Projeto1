@@ -27,4 +27,8 @@ document.addEventListener("DOMContentLoaded", function() {
 );
 
 
-const fillInBlanksDone = localStorage.getItem('fillInBlanksDone') === 'false';
+localStorage.setItem("puzzleDone", false);
+localStorage.setItem("fillInBlanksDone", false);
+localStorage.setItem("room2Done", false);
+
+
