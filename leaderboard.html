@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projeto 1 TSIW">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Sérgio Gonçalves, Gonçalo Chaves, Samuel Fernandes">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./Style/global.css">
+    <title>Leaderboard</title>
+</head>
+<body>
+    <nav>
+        <a href="main.html"><img id="logo" src="./images/logo.svg"></a>
+        <div class="avatar-container"style="display:flex;">    
+                <button id="escapeButton" onclick="escapeRoomStatus()">Escape Room</button>
+            <a href="profile.html">
+                <img id="avatar">
+            </a>
+            <a href="login.html"><button id="loginRegisterButton">Login/Register</button></a>
+        </div>
+    </nav>
+
+    <div>
+        <h1 style="color: white;">Your Score</h1>
+        <div id="userPlacementCard">
+            <div id="userPlacement">14th</div>
+            <div id="userName">Johns</div>
+            <div id="userTime">00min-00s</div>
+            <div >
+                <img id="userAvatar" src="./images/avatares/avatar1.svg">
+            </div>
+        </div>
+    </div>
+    <style>
+        #userPlacementCard{
+            background-color: grey;
+            color: white;
+            font-size: 2em;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            width: 50vh;
+            padding: 10px;
+        }
+        #userAvatar{
+            width: 13vh;
+        }
+    </style>
+    <script>
+        const activeUserName=document.getElementById("userName")
+        const activeUserAvatar=document.getElementById("userAvatar")
+        const activeUserTime=document.getElementById("userTime")
+        const activeUserPlacement=document.getElementById("userPlacement")
+        function loadActiveUser(){
+            let users = JSON.parse(localStorage.getItem("users")) || [];
+            const userIndex = users.findIndex(u => u.status === "active");
+            if (userIndex !== -1) {
+                activeUserName.innerHTML=users[userIndex].username
+                activeUserAvatar.src=users[userIndex].avatar
+                let userTime=users[userIndex].escapeRoomTime
+                if (userTime==0){
+                    activeUserPlacement.innerHTML="--"
+                    activeUserTime.innerHTML="00min--00sec"
+                    console.log("Ola")
+                }else{
+                    activeUserTime.innerHTML=(userTime-userTime%60)/60+"min--"+userTime%60+"sec"
+                }
+            }
+    }
+    window.addEventListener('load', loadActiveUser);
+    </script>
+    <script src="./scripts/views/ProfileView.js"></script>
+</body>
+</html>
