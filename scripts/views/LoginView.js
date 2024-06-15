@@ -34,10 +34,17 @@ function registerUser() {
         displayAlert("Passwords don't match", "danger");
         return;
     }
-
+    let users = JSON.parse(localStorage.getItem('users')) || [];
+    const userIndex = users.findIndex(u => u.email==email);
+    console.log(userIndex)
+    
+    if (userIndex!==-1){
+        displayAlert("Email already in use","danger");
+        return
+    }
     const newUser = new User(nome, idade, sexo, localidade, email, username, password);
 
-    let users = JSON.parse(localStorage.getItem('users')) || [];
+    
     users.push(newUser);
     localStorage.setItem('users', JSON.stringify(users));
 

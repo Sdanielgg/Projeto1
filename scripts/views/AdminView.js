@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (adminUser) {
             displayAlert('Login successful!', 'success');
-            window.location.href = '../admin_page.html';
+            window.location.href = './admin_page.html';
         } else {
             displayAlert('Invalid username or password', 'danger');
         }
