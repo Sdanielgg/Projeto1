@@ -100,7 +100,7 @@ function changeCredentials() {
       
       async function handleChange() {
         
-        await wait(1000); // Wait for 1 second (1000 milliseconds)
+        await wait(1000);
         
         window.location.href = "./profile.html";
       }

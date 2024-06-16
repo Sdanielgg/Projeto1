@@ -8,7 +8,6 @@
     box-sizing: border-box;
     text-align: center;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 10px; 
     overflow: auto; 
     padding: 30px; 
@@ -25,7 +24,6 @@
     box-sizing: border-box;
     text-align: center;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 10px; 
     overflow: auto; 
     padding: 30px; 
@@ -43,7 +41,6 @@
     box-sizing: border-box;
     text-align: center;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 10px; 
     overflow: auto; 
     padding: 30px; 

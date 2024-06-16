@@ -2,17 +2,17 @@ function setUserAvatar() {
     let users = JSON.parse(localStorage.getItem("users")) || [];
 
     const userIndex = users.findIndex(u => u.status === "active");
-    const avatarImg=document.getElementById("avatar")
-    const loginRegisterButton=document.getElementById("loginRegisterButton")
+    const avatarImg=document.getElementById("avatar");
+    const loginRegisterButton=document.getElementById("loginRegisterButton");
 
     if (userIndex !== -1) {
         let newAvatarSrc = users[userIndex].avatar;
         document.getElementById("avatar").src = newAvatarSrc;
-        avatarImg.style.display="block"
-        loginRegisterButton.style.display="none"
+        avatarImg.style.display="block";
+        loginRegisterButton.style.display="none";
     } else {
-        loginRegisterButton.style.display="block"
-        avatarImg.style.display="none"
+        loginRegisterButton.style.display="block";
+        avatarImg.style.display="none";
     }
 }
 
@@ -24,9 +24,9 @@ function escapeRoomStatus(){
     const userIndex = users.findIndex(u => u.status === "active");
 
     if (userIndex !== -1) {
-        window.location="./EscapeRoom/intro.html"
+        window.location="./EscapeRoom/intro.html";
     } else {
-        console.log("user not logged in")
+        console.log("user not logged in");
         // samuel faz as tuas alerts aqui se puderes :)
     }
 }

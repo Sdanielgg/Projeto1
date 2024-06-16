@@ -57,12 +57,11 @@ function wait(ms) {
   async function handleLoginSuccess() {
     displayAlert('Login successful!', 'success');
     
-    await wait(1000); // Wait for 1 second (1000 milliseconds)
+    await wait(1000); 
     
     window.location.href = "./main.html";
   }
   
-  // Call the function to handle login success
 
 function loginUser() {
     const username = document.querySelector('#Login input[placeholder="Username"]').value;

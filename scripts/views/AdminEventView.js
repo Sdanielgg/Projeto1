@@ -33,8 +33,7 @@ function displayEvents() {
         const eventMessage = document.createElement('p');
         eventMessage.textContent = event.messageBody;
         eventMessage.classList.add('card-text');
-
-        // Create a div to hold the buttons
+        
         const buttonContainer = document.createElement('div');
         buttonContainer.classList.add('card-buttons');
 
@@ -52,7 +51,6 @@ function displayEvents() {
             deleteEvent(index);
         });
 
-        // Add buttons to the container
         buttonContainer.appendChild(editButton);
         buttonContainer.appendChild(deleteButton);
 

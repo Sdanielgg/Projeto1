@@ -3,7 +3,7 @@ import { Testimonial } from '../models/testimonial_model.js';
 const testimonialForm = document.getElementById('testimonialForm');
 const testimonialList = document.getElementById('testimonialList');
 const testimonials = JSON.parse(localStorage.getItem('testimonials')) || [];
-let editIndex = -1; // Store index of the testimonial being edited
+let editIndex = -1;
 
 function saveTestimonials() {
     localStorage.setItem('testimonials', JSON.stringify(testimonials));
