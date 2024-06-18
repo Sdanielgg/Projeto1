@@ -113,6 +113,25 @@ button:hover{
 #escapeButton:hover,#loginRegisterButton:hover {
     background-color: #161a5e;
 }
+#backButtonContainer{
+    display: flex;
+    justify-content: flex-start;
+    width: 90vh;
+}
+#backButton {
+    background-color: #337ab7;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 20vh; 
+}
+#backButton:hover {
+    background-color: #23527c;
+}
+
 /* Footer */
 
 footer{

@@ -102,7 +102,8 @@ function changeCredentials() {
         
         await wait(1000);
         
-        window.location.href = "./profile.html";
+        window.location = "./profile.html";
       }
-
-
+      function goBack() {
+        window.location="./profile.html"
+      }
