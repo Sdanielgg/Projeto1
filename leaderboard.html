@@ -29,24 +29,21 @@
     <div>
         <h1 style="color: white;">Your Score</h1>
         <div id="userPlacementCard">
-            <div id="userPlacement">14th</div>
+            <div id="userPlacement"></div>
             <div id="userName">Johns</div>
             <div id="userTime">00min-00s</div>
-            <div >
+            <div>
                 <img id="userAvatar" src="./images/avatares/avatar1.svg">
             </div>
         </div>
     </div>
     <div>
         <h1 style="color: white;">Top 5 User Ranking</h1>
-        <div id="rankingPlacementCard">
-            <div id="userPlacement">14th</div>
-            <div id="userName">Johns</div>
-            <div id="userTime">00min-00s</div>
+        <div id="userRankingCard">
         </div>
     </div>
     <style>
-        #userPlacementCard{
+        #userPlacementCard,#userRankingCard{
             background-color: grey;
             color: white;
             font-size: 2em;
@@ -61,18 +58,37 @@
             padding: 20px;
             border-radius: 10px;
         }
+        #userRankingCard{
+            flex-direction: column;
+        }
         #userAvatar{
             width: 13vh;
         }
-        
+        #userCard{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            width: 80vh;
+        }
+        .rankingAvatar{
+            width: 13vh;
+
+        }
     </style>
     <script>
         const activeUserName=document.getElementById("userName")
         const activeUserAvatar=document.getElementById("userAvatar")
         const activeUserTime=document.getElementById("userTime")
-        const activeUserPlacement=document.getElementById("userPlacement")
+        const activeUserPlacement=document.getElementById("userPlacement")    
+        let users = JSON.parse(localStorage.getItem("users")) || [];
+        let usersTime=[]
+        for (i=0;i<users.length;i++){
+            usersTime.push(users[i].escapeRoomTime)
+        }
+        usersTime.sort(function(a, b){return a - b});
+        console.log(usersTime)
         function loadActiveUser(){
-            let users = JSON.parse(localStorage.getItem("users")) || [];
             const userIndex = users.findIndex(u => u.status === "active");
             if (userIndex !== -1) {
                 activeUserName.innerHTML=users[userIndex].username
@@ -83,11 +99,39 @@
                     activeUserTime.innerHTML="00min--00sec"
                     console.log("Ola")
                 }else{
-                    activeUserTime.innerHTML=(userTime-userTime%60)/60+"min--"+userTime%60+"sec"
+                    activeUserTime.innerHTML=(userTime-userTime%60)/60+"min--"+userTime%60+"s"
+                    activeUserPlacement.innerHTML=usersTime.findIndex(element=> element= users[userIndex].escapeRoomTime+1)+2 
+                    console.log(usersTime.findIndex(element=> element=== users[userIndex].escapeRoomTime+1))
+                    
                 }
             }
     }
+    function loadRanking(){
+        for (i=0;i<3;i++){
+            let userIndex=users.findIndex(u=>u.escapeRoomTime=== usersTime[i])
+            let userCard=document.createElement("div")
+            let name=document.createElement("div")
+            let time=document.createElement("div")
+            let placement=document.createElement("div")
+            let avatarContainer=document.createElement("div")
+            let avatar=document.createElement("img")
+            let userRanking=document.getElementById("userRankingCard")
+            userRanking.appendChild(userCard)
+            let userTime=users[userIndex].escapeRoomTime 
+            userCard.id="userCard"
+            placement.innerHTML=i+1
+            name.innerHTML=users[userIndex].username
+            time.innerHTML= (userTime-userTime%60)/60+"min--"+userTime%60+"s"
+            avatar.src=users[userIndex].avatar
+            avatar.className="rankingAvatar"
+            userCard.appendChild(placement)
+            userCard.appendChild(name)
+            userCard.appendChild(time)
+            userCard.appendChild(avatar)
+        }
+    }
     window.addEventListener('load', loadActiveUser);
+    loadRanking()
     function goBack(){
         window.location="./escape_room.html"
     }

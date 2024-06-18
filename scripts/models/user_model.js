@@ -1,5 +1,5 @@
 class User {
-    constructor(nome, idade, sexo, localidade, email, username, password, status = "inactive", role = "regular",avatar="./images/avatares/avatar1.svg",escapeRoomTime=130) {
+    constructor(nome, idade, sexo, localidade, email, username, password, status = "inactive", role = "regular",avatar="./images/avatares/avatar1.svg",escapeRoomTime=101) {
         this.nome = nome;
         this.idade = idade;
         this.sexo = sexo;

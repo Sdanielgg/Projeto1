@@ -39,7 +39,7 @@
 
 .nome {
     font-weight: bold;
-    font-size: 1.2em; 
+    font-size: 2em; 
     margin-bottom: 10px; 
 }
 
@@ -48,6 +48,7 @@
     text-align: left;
     margin-top: 20px; 
     transition: all 0.3s ease;
+    font-size :1.5em;
 }
 
 .clear {
