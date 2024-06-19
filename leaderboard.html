@@ -8,6 +8,8 @@
     <meta name="author" content="Sérgio Gonçalves, Gonçalo Chaves, Samuel Fernandes">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="./Style/global.css">
+    <link rel="stylesheet" href="./Style/leaderboard.css">
+    
     <title>Leaderboard</title>
 </head>
 <body>
@@ -30,8 +32,8 @@
         <h1 style="color: white;">Your Score</h1>
         <div id="userPlacementCard">
             <div id="userPlacement"></div>
-            <div id="userName">Johns</div>
-            <div id="userTime">00min-00s</div>
+            <div id="userName"></div>
+            <div id="userTime"></div>
             <div>
                 <img id="userAvatar" src="./images/avatares/avatar1.svg">
             </div>
@@ -42,105 +44,7 @@
         <div id="userRankingCard">
         </div>
     </div>
-    <style>
-        #userPlacementCard,#userRankingCard{
-            background-color: grey;
-            color: white;
-            font-size: 2em;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-around;
-            width: 90vh;
-            background-color: #acbadb;
-            border: 3px solid #6b7897;
-            margin: 20px auto; 
-            padding: 20px;
-            border-radius: 10px;
-        }
-        #userRankingCard{
-            flex-direction: column;
-        }
-        #userAvatar{
-            width: 13vh;
-        }
-        #userCard{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            width: 80vh;
-            margin-bottom: 4vh;
-        }
-        .rankingAvatar{
-            width: 13vh;
-
-        }
-    </style>
-    <script>
-        const activeUserName=document.getElementById("userName")
-        const activeUserAvatar=document.getElementById("userAvatar")
-        const activeUserTime=document.getElementById("userTime")
-        const activeUserPlacement=document.getElementById("userPlacement")    
-        let users = JSON.parse(localStorage.getItem("users")) || [];
-        let usersTime=[]
-        for (let i = 0; i < users.length; i++) {
-            usersTime.push({
-            time: users[i].escapeRoomTime,
-            username: users[i].username
-            });
-        }   
-        console.log(usersTime)
-        usersTime.sort((a, b) => a.time - b.time);
-        console.log(usersTime)
-        function loadActiveUser(){
-            const userIndex = users.findIndex(u => u.status === "active");
-            if (userIndex !== -1) {
-                activeUserName.innerHTML=users[userIndex].username
-                activeUserAvatar.src=users[userIndex].avatar
-                let userTime=users[userIndex].escapeRoomTime
-                if (userTime==0){
-                    activeUserPlacement.innerHTML="--"
-                    activeUserTime.innerHTML="00min--00sec"
-                    console.log("Ola")
-                }else{
-                    activeUserTime.innerHTML=(userTime-userTime%60)/60+"min--"+userTime%60+"s"
-                    activeUserPlacement.innerHTML=usersTime.findIndex(element=> element= users[userIndex].escapeRoomTime+1)+2 
-                    console.log(usersTime.findIndex(element=> element=== users[userIndex].escapeRoomTime+1))
-                    
-                }
-            }
-    }
-    function loadRanking(){
-        for (i=0;i<5;i++){
-            let userIndex=users.findIndex(u=>u.escapeRoomTime=== usersTime[i].time && u.username ===usersTime[i].username)
-            let userCard=document.createElement("div")
-            let name=document.createElement("div")
-            let time=document.createElement("div")
-            let placement=document.createElement("div")
-            let avatarContainer=document.createElement("div")
-            let avatar=document.createElement("img")
-            let userRanking=document.getElementById("userRankingCard")
-            userRanking.appendChild(userCard)
-            let userTime=users[userIndex].escapeRoomTime 
-            userCard.id="userCard"
-            placement.innerHTML=i+1
-            name.innerHTML=users[userIndex].username
-            time.innerHTML= (userTime-userTime%60)/60+"min--"+userTime%60+"s"
-            avatar.src=users[userIndex].avatar
-            avatar.className="rankingAvatar"
-            userCard.appendChild(placement)
-            userCard.appendChild(name)
-            userCard.appendChild(time)
-            userCard.appendChild(avatar)
-        }
-    }
-    window.addEventListener('load', loadActiveUser);
-    loadRanking()
-    function goBack(){
-        window.location="./escape_room.html"
-    }
-    </script>
+    <script src="./scripts/views/leaderboardView.js"></script>
     <script src="./scripts/views/ProfileView.js"></script>
 </body>
 </html>
