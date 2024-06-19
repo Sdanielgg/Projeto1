@@ -9,6 +9,8 @@
         // Obter tempo decorrido do localStorage
         document.addEventListener('DOMContentLoaded', () => {
             const elapsedTime = localStorage.getItem('elapsedTime');
+            console.log(elapsedTime%100)
+            console.log((elapsedTime-elapsedTime%1000)/1000)
             const timeInMilliseconds = elapsedTime ? parseInt(elapsedTime, 10) : 0;
             document.getElementById('time').textContent = formatTime(timeInMilliseconds);
         });
@@ -78,6 +80,24 @@ function Points(){
         movePoints();
     });
     }
+    // 
+    function bestTime(){
+        let users = JSON.parse(localStorage.getItem("users")) || [];
+        const userIndex = users.findIndex(u => u.status === "active");
+        if (userIndex!=-1){
+            const elapsedTime = localStorage.getItem('elapsedTime');
+            let totalSeconds=((elapsedTime-elapsedTime%1000)/1000)
+            console.log(totalSeconds)
 
+            if (users[userIndex].escapeRoomTime>totalSeconds){
+                users[userIndex].escapeRoomTime=totalSeconds
+                localStorage.setItem("users", JSON.stringify(users));
 
+        }
+        }else{
+            console.error("ERROR USER IS NOT LOGGED IN")
+        }
+
+    }
+    bestTime()
     Points();

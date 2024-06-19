@@ -43,7 +43,6 @@ function displayTestimonials() {
         testimonialMessage.textContent = testimonial.messageBody;
         testimonialMessage.classList.add('card-text');
 
-        // Create a div to hold the buttons
         const buttonContainer = document.createElement('div');
         buttonContainer.classList.add('card-buttons');
 
@@ -61,7 +60,6 @@ function displayTestimonials() {
             deleteTestimonial(index);
         });
 
-        // Add buttons to the container
         buttonContainer.appendChild(editButton);
         buttonContainer.appendChild(deleteButton);
 
