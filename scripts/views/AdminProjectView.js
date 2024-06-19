@@ -123,3 +123,4 @@ function updateProject(index, name, messageBody, image) {
     editIndex = -1;
     displayProjects();
 }
+displayProjects();

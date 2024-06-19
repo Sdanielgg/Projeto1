@@ -9,8 +9,9 @@ body {
 }
 
 .container {
-    max-width: 600px;
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     padding: 0 15px;
     margin-top: 20px;
 }
@@ -20,9 +21,10 @@ h1, h2 {
 }
 
 #backButton {
-    background-color: #337ab7;
-    color: #fff;
+    background-color: #337ab7; 
+    color: #fff; 
     border: none;
+    width: 20vh;
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
@@ -76,10 +78,8 @@ form .btn-primary:hover {
     background-color: #337ab7;
     border: none;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     color: #fff;
-    flex: 1 1 calc(33.333% - 20px);
     display: flex;
     flex-direction: column;
     max-width: 300px; 

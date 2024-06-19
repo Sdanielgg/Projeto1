@@ -9,21 +9,15 @@
     flex-direction: row;
     align-items: center;
     width: 90%;
-    max-width: 800px;
     background-color: #acbadb;
     border: 3px solid #6b7897;
     margin: 20px;
     padding: 20px; 
     box-sizing: border-box;
     text-align: left;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 10px; 
 }
 
-.testemunho:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
-}
 
 .image {
     flex-shrink: 0;
@@ -31,8 +25,7 @@
 }
 
 .image img {
-    width: 100px; 
-    height: 100px;
+    width: 200px; 
     border-radius: 10px; 
     object-fit: cover;
 }

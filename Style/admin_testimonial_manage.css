@@ -9,8 +9,9 @@ body {
 }
 
 .container {
-    max-width: 600px;
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     padding: 0 15px;
     margin-top: 20px;
 }
@@ -23,6 +24,7 @@ h1, h2 {
     background-color: #337ab7; 
     color: #fff; 
     border: none;
+    width: 20vh;
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;

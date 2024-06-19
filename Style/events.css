@@ -7,22 +7,15 @@
 .evento {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items:flex-start;
     width: 90%;
     max-width: 800px;
     background-color: #acbadb;
     border: 3px solid #6b7897;
     margin: 20px;
     padding: 20px;
-    box-sizing: border-box;
     text-align: left;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-}
-
-.evento:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .image {
@@ -31,8 +24,8 @@
 }
 
 .image img {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     border-radius: 10px;
     object-fit: cover;
 }
