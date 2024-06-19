@@ -68,8 +68,9 @@
             display: flex;
             flex-direction: row;
             align-items: center;
-            justify-content: space-around;
+            justify-content: space-between;
             width: 80vh;
+            margin-bottom: 4vh;
         }
         .rankingAvatar{
             width: 13vh;
@@ -83,10 +84,14 @@
         const activeUserPlacement=document.getElementById("userPlacement")    
         let users = JSON.parse(localStorage.getItem("users")) || [];
         let usersTime=[]
-        for (i=0;i<users.length;i++){
-            usersTime.push(users[i].escapeRoomTime)
-        }
-        usersTime.sort(function(a, b){return a - b});
+        for (let i = 0; i < users.length; i++) {
+            usersTime.push({
+            time: users[i].escapeRoomTime,
+            username: users[i].username
+            });
+        }   
+        console.log(usersTime)
+        usersTime.sort((a, b) => a.time - b.time);
         console.log(usersTime)
         function loadActiveUser(){
             const userIndex = users.findIndex(u => u.status === "active");
@@ -107,8 +112,8 @@
             }
     }
     function loadRanking(){
-        for (i=0;i<3;i++){
-            let userIndex=users.findIndex(u=>u.escapeRoomTime=== usersTime[i])
+        for (i=0;i<5;i++){
+            let userIndex=users.findIndex(u=>u.escapeRoomTime=== usersTime[i].time && u.username ===usersTime[i].username)
             let userCard=document.createElement("div")
             let name=document.createElement("div")
             let time=document.createElement("div")
