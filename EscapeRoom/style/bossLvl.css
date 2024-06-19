@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.game-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+#player {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-image: url('images/hoot.png'); /* Caminho para a imagem do jogador */
+    background-size: cover;
+}
+
+#player-health-bar {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 10px;
+    background-color: #555;
+}
+
+#player-health {
+    width: 100%;
+    height: 100%;
+    background-color: #0f0;
+}
+
+#enemy {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-image: url('images/virusBoss.png'); /* Caminho para a imagem do inimigo */
+    background-size: cover;
+}
+
+#enemy-health-bar {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 200px;
+    height: 20px;
+    background-color: #555;
+}
+
+#enemy-health {
+    width: 100%;
+    height: 100%;
+    background-color: #0f0;
+}
+
+.projectile1 {
+    position: absolute;
+    width: 20px; /* Ajuste conforme necessário */
+    height: 20px; /* Ajuste conforme necessário */
+    background-image: url('images/htmlImg.png'); /* Caminho para a imagem dos projéteis do jogador */
+    background-size: cover;
+}
+
+.projectile2 {
+    position: absolute;
+    width: 20px; /* Ajuste conforme necessário */
+    height: 20px; /* Ajuste conforme necessário */
+    background-image: url('images/css-logo.png'); /* Caminho para a imagem dos projéteis do jogador */
+    background-size: cover;
+}
+
+.projectile3 {
+    position: absolute;
+    width: 20px; /* Ajuste conforme necessário */
+    height: 20px; /* Ajuste conforme necessário */
+    background-image: url('images/javascriptLogo.webp'); /* Caminho para a imagem dos projéteis do jogador */
+    background-size: cover;
+}
+
+.enemy-projectile {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-image: url('images/EnemyProj.png'); /* Caminho para a imagem dos projéteis do inimigo */
+    background-size: cover;
+}

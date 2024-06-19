@@ -290,10 +290,22 @@ function animate() {
     requestAnimationFrame(animate);
 }
 
+function goToBoss(){
+    if(fillInBlanksDone){
+        if(room2Done){
+            if(puzzleDone){
+                window.location.href = 'BossLvl.html';
+            }
+        }
+    }
+}
+
 animate();
 
 Points1();
 Points2();
 Points3();
 animate(); 
- 
+
+goToBoss();
+

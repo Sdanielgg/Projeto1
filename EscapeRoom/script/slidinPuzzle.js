@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
     let emptyTileIndex = 8;
     const winningCombination = ['tile-1', 'tile-2', 'tile-3', 'tile-4', 'tile-5', 'tile-6', 'tile-7', 'tile-8', 'empty'];
     let isSolved = false;
-
     // Initialize the puzzle
     function initializePuzzle() {
       tiles.forEach(function(tile, index) {
@@ -76,8 +75,9 @@ document.addEventListener('DOMContentLoaded', function() {
         fadeInEmptyTile();
         const puzzleDone = true;  
         localStorage.setItem("puzzleDone", puzzleDone);
-        setTimeout(() => {
-          window.open("viruses.html");
+        setTimeout(function() {
+
+              window.location.href = 'viruses.html';
         }, 2000);
         
       } else {
@@ -111,16 +111,13 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener("DOMContentLoaded", () => {
         const container = document.getElementById('puzzle');
         const points = [];
-        const numPoints = 50; // Total de pontos
-
+        const numPoints = 50; 
     
-        // Função para gerar um número aleatório entre min e max
         function getRandom(min, max) {
             return Math.random() * (max - min) + min;
         }
     
     
-        // Cria pontos com posições e direções aleatórias
         for (let i = 0; i < numPoints; i++) {
             const point = document.createElement('div');
             point.classList.add('point');
@@ -131,27 +128,24 @@ document.addEventListener('DOMContentLoaded', function() {
                 element: point,
                 x: getRandom(0, window.innerWidth - 20),
                 y: getRandom(0, window.innerHeight - 20),
-                dx: getRandom(-3, 3), // Garantir que dx não seja 0
-                dy: getRandom(-3, 3)   // Garantir que dy não seja 0
+                dx: getRandom(-3, 3), 
+                dy: getRandom(-3, 3)   
             });
         }
     
         function movePoints() {
           
             points.forEach(point => {
-                // Move o ponto
                 point.x += point.dx;
                 point.y += point.dy;
     
-                // Verifica colisão com as bordas do contêiner
                 if (point.x <= 0 || point.x >= window.innerWidth - 20) {
-                    point.dx *= -1; // Inverte a direção no eixo x
+                    point.dx *= -1; 
                 }
                 if (point.y <= 0 || point.y >= window.innerHeight - 20) {
-                    point.dy *= -1; // Inverte a direção no eixo y
+                    point.dy *= -1; 
                 }
     
-                // Atualiza a posição do elemento ponto
                 point.element.style.left = `${point.x}px`;
                 point.element.style.top = `${point.y}px`;
                 if(puzzleisDone == true){
