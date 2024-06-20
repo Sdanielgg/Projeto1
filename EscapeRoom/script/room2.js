@@ -44,6 +44,9 @@ function handleClick(buttonId) {
         {
             const room2Done = true;  
             localStorage.setItem("room2Done", room2Done);
+            var botao = document.getElementById('botao1');
+            botao.style.backgroundColor ="#68ff7c" 
+
             setTimeout(function() {
                     window.location.href = 'viruses.html';
                            }, 1000);
