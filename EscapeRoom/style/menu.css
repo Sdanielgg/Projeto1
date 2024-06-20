@@ -1,0 +1,91 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #001233;
+    margin: 0;
+}
+
+@font-face {
+    font-family: "Cascadia";
+    src: url("fonts/Cascadia.ttf");
+  }
+
+
+#victory-container {
+    text-align: center;
+    z-index: 1;
+}
+
+h1{
+    font-family:Cascadia; 
+    color: #119822;
+}
+
+.button-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    background-color: rgba(255, 255, 255, 0.767);    
+    color: #119822;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+
+    border: none;
+    padding: 20px 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 25px 0; 
+    font-size: 30px;
+    cursor: pointer;
+    font-family:Cascadia; 
+
+}
+
+
+button:hover {
+    background-color: #E30613;
+}
+
+.image-container {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    align-items: center;
+}
+
+
+
+#hoot{
+    width: 250px;
+    height: auto;
+    position: absolute;
+    left: 200px;
+}
+
+#virus{
+    width: 250px;
+    height: auto;
+    position: absolute;
+    right: 200px;
+}
+
+#container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.point {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+} 
