@@ -10,17 +10,19 @@ let playerSpeed = 2;
 let enemySpeed = 0.5;
 let keys = {};
 let shooting = false;
+let shootingInterval = null;
 let lastPlayerShotTime = 0;
 let lastEnemyShotTime = 0;
 let lastEnemyConeShotTime = 0;
 let lastEnemyCircleShotTime = 0;
-const playerFireRate = 500; // 2 tiros por segundo (1000ms / 2)
-const enemyFireRate = 800; // 3 tiros por segundo (1000ms / 3)
-const enemyConeFireInterval = 10000; // Disparo em cone a cada 10 segundos
+const playerFireRate = 250; // x tiros por segundo (1000ms / x)
+const enemyFireRate = 800; // tiros por segundo do inimigo 
+const enemyConeFireInterval = 3000; // Disparo em cone a cada x segundos
 const enemyCircleFireInterval = 2000; // Disparo em círculo a cada 2 segundos
 const playerProjectileSpeed = 11; // Velocidade do projétil do jogador
 const enemyProjectileSpeed = 8; // Velocidade do projétil do inimigo
 let enemyExploded = false;
+let cursorPosition = { x: 0, y: 0 };
 
 function updatePlayerPosition() {
     player.style.left = `${playerPosition.x}px`;
@@ -40,12 +42,22 @@ document.addEventListener('keyup', (event) => {
     keys[event.key] = false;
 });
 
+document.addEventListener('mousemove', (event) => {
+    cursorPosition.x = event.clientX;
+    cursorPosition.y = event.clientY;
+});
+
 document.addEventListener('mousedown', () => {
     shooting = true;
+    if (!shootingInterval) {
+        shootingInterval = setInterval(() => handleShooting(), playerFireRate);
+    }
 });
 
 document.addEventListener('mouseup', () => {
     shooting = false;
+    clearInterval(shootingInterval);
+    shootingInterval = null;
 });
 
 function movePlayer() {
@@ -104,19 +116,13 @@ function shootProjectile(targetX, targetY) {
     }, 20);
 }
 
-function handleShooting(event) {
+function handleShooting() {
     const currentTime = new Date().getTime();
     if (shooting && currentTime - lastPlayerShotTime > playerFireRate) {
-        shootProjectile(event.clientX, event.clientY);
+        shootProjectile(cursorPosition.x, cursorPosition.y);
         lastPlayerShotTime = currentTime;
     }
 }
-
-document.addEventListener('mousemove', (event) => {
-    if (shooting) {
-        handleShooting(event);
-    }
-});
 
 function checkCollision(projectile, target) {
     const pRect = projectile.getBoundingClientRect();
@@ -223,7 +229,8 @@ function shootEnemyConeProjectiles() {
 }
 
 function shootEnemyCircleProjectiles() {
-    const totalProjectiles = 10;
+    const totalProjectiles = 30; // Número de projéteis no círculo
+
     for (let i = 0; i < totalProjectiles; i++) {
         const projectile = document.createElement('div');
         projectile.className = 'enemy-projectile';
